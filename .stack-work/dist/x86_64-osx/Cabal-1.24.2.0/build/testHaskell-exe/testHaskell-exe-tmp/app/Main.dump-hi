@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-08-16 11:40:37.211173 UTC
+2017-08-18 12:19:56.368228 UTC
 
 interface main@main:Main 8002
-  interface hash: f61b4dc95885f4199957d74317c9efb1
-  ABI hash: 610dd45dbb8c3110a4c8e17a058814ba
+  interface hash: 49ced1f92ae1492771dca6d6a8d4f272
+  ABI hash: 841d82d43f61fe83ab71024ad32f26ee
   export-list hash: 1385ac1f0130dd92ce84602c322512ab
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 31fb286430dff325e31e042acea207c7
@@ -23,10 +23,151 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
                          base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
                          base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Typeable 9257e47d10882145c67c5b489965cfb7
+import  -/  base-4.9.1.0:Data.Typeable.Internal 0e9bdefa4325a0112d8e73b5e1e1f85d
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  base-4.9.1.0:System.IO c9de64c5f5407c4cf1c52500c4d15200
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  testHaskell-0.1.0.0@testHaskell-0.1.0.0-rJfTykrnANG4sb3MLkjDL:Lib a8a202d07e7398a1cfa35c4a47b2ef3c
+9bba2e7388a1e0bedadf2b1588a372ab
+  $stypeOf10 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Main.$stypeOf11
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   GHC.Types.$tc[]
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+822b4ab38019ebc4e0fc4a446f90bc53
+  $stypeOf11 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   17730107610217102821##
+                   9866972337190828755##) -}
+b50a319fbba82bbd65bea0b6c63440c4
+  $stypeOf12 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Main.$stypeOf13
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   GHC.Tuple.$tc(,)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+1ccf0081a4d16d2f1a7463f74a1f94e3
+  $stypeOf13 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   17502837480397947244##
+                   15872498598114190556##) -}
+54dbea8d1566a03b340c6c92fe4e7163
+  $stypeOf2 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Main.$stypeOf3
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   GHC.Types.$tcBool
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+8448d7019f9b1026b8ee331f86f7ad67
+  $stypeOf3 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   15899861992609591342##
+                   8208526680161485329##) -}
+27e2ce959f9e88dbd00fa83c6d6fb696
+  $stypeOf4 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Main.$stypeOf12 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++ @ Data.Typeable.Internal.TypeRep trs Main.$stypeOf5
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types } } }) -}
+deb9ebf2e8ddfa92e5432028bc71b040
+  $stypeOf5 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Main.$stypeOf6
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+33a0fa38f63713f94bca3175c1d993eb
+  $stypeOf6 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Main.$stypeOf10 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++ @ Data.Typeable.Internal.TypeRep trs Main.$stypeOf7
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types } } }) -}
+5ad9b5ef3efb4bd9f7322d0ed3ccc221
+  $stypeOf7 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Main.$stypeOf8
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+929d6b09dd5a76069d75d6f2eb3c2dff
+  $stypeOf8 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Main.$stypeOf9
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   GHC.Types.$tcChar
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+d59bfb63a13936793dd9deb7dae69d61
+  $stypeOf9 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   16781394633280494409##
+                   2520638044472077920##) -}
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -39,12 +180,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-14a661c6fba93c6b10769c2ce4ef1971
+5ca72a625aa2e5fd013af23eeab3c58b
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-0c6d0738b3fdc5d23613896288d06c83
+8d5f2c6370da0be34c3daa264d2b87df
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -52,9 +193,39 @@ d6831ef04cb9301b090dfae6f7bb7ec7
      Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case GHC.IO.Handle.Text.hPutStr2
                         GHC.IO.Handle.FD.stdout
-                        Main.main2
+                        Main.main39
                         GHC.Types.True
                         s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main23
+                        GHC.Types.True
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main20
+                        GHC.Types.True
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main14
+                        GHC.Types.True
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main11
+                        GHC.Types.True
+                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main5
+                        GHC.Types.True
+                        ipv8 of ds6 { (#,#) ipv10 ipv11 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main2
+                        GHC.Types.True
+                        ipv10 of ds7 { (#,#) ipv12 ipv13 ->
                  case GHC.IO.Handle.Internals.wantReadableHandle_1
                         @ GHC.Base.String
                         GHC.IO.Handle.Text.hGetLine4
@@ -63,23 +234,309 @@ d6831ef04cb9301b090dfae6f7bb7ec7
                           `cast`
                         (<GHC.IO.Handle.Types.Handle__>_R
                          ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
-                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                        ipv12 of ds8 { (#,#) ipv14 ipv15 ->
                  GHC.IO.Handle.Text.hPutStr2
                    GHC.IO.Handle.FD.stdout
-                   (Lib.greet ipv3)
+                   (Lib.greet ipv15)
                    GHC.Types.True
-                   ipv2 } }) -}
-1c230bdac868c2e93c5d169dd237e4b4
+                   ipv14 } } } } } } } }) -}
+750590662027986fe09bc467921bd9ee
+  main10 :: [GHC.Types.Bool]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Bool
+                   GHC.Types.False
+                   (GHC.Types.[] @ GHC.Types.Bool)) -}
+03428cd9661a20e8bd10eac4342ca8f6
+  main11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "head list of list: "#
+                   Main.main12) -}
+1bba74bef3d379c3b1bf69bdd4eaf4f3
+  main12 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.$fShowBool_$cshowList
+                   Main.main13
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+5c4dd75ebba31a6b68a6fd010ef06517
+  main13 :: [GHC.Types.Bool]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Bool
+                   GHC.Types.True
+                   (GHC.Types.[] @ GHC.Types.Bool)) -}
+7bd0ca7f5598cfba1fb665895bee6f8b
+  main14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "tail list: "#
+                   Main.main15) -}
+52d642f37b8e544e39c5705d764a1228
+  main15 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.$fShowInteger_$cshowList
+                   Main.main16
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+a2c960aaae9f8b5f467671d32d818d1c
+  main16 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.main19
+                   Main.main17) -}
+de69351a9eee4b7cbb3e71ff5b8e0dd1
+  main17 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.main18
+                   (GHC.Types.[] @ GHC.Integer.Type.Integer)) -}
+37edb7d0c6af9a873c1ff37860f78495
+  main18 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (3) -}
+b63d417a56c1509dca59dda308711658
+  main19 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+844a0c5670ffeca671f497a4a5426337
   main2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "What's your name?"#) -}
-5733f38f2e5982c2799b3307ef12eb7e
-  main3 ::
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "type of tuple: "#
+                   Main.main3) -}
+f3dd15a23b7f14e3290ce37259993f07
+  main20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "head list: "#
+                   Main.main21) -}
+1d2fbc9354e643a060d24d8160ab34e9
+  main21 :: [GHC.Types.Char]
+  {- Unfolding: (case GHC.Show.$w$cshowsPrec1
+                        0#
+                        Main.main22
+                        (GHC.Types.[] @ GHC.Types.Char) of ww2 { (#,#) ww3 ww4 ->
+                 GHC.Types.: @ GHC.Types.Char ww3 ww4 }) -}
+6a2b77707eacfb029f8780f86c63c505
+  main22 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+b8f64a281f8c29c3d57d2f2c00be1682
+  main23 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "triple: "#
+                   Main.main24) -}
+ab28e291f49ee1a533e9117d710d9b43
+  main24 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows7
+                   Main.main25) -}
+58588700faa60b79bb6cab3a71a7ed18
+  main25 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.$fShowInteger_$cshowList
+                   Main.main38
+                   Main.main26) -}
+29ffbbd0b864b62229d8907a7c91d90f
+  main26 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows5
+                   Main.main27) -}
+cae9791bacf3d1dc8da1c058f23b0c5f
+  main27 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.$fShow(,,)_$sgo
+                   Main.main37
+                   Main.main36
+                   Main.main28) -}
+3305053ae3d61cdfb055aec532ad79af
+  main28 :: [GHC.Show.ShowS]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Show.ShowS
+                   Main.main29
+                   (GHC.Types.[] @ GHC.Show.ShowS)) -}
+2198588041deead20c0bcbba8c22419b
+  main29 :: GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (\ (eta1 :: GHC.Base.String) ->
+                 GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows6
+                   (GHC.Show.showLitString
+                      Main.main_eta
+                      (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 eta1))) -}
+7116ebad3e99ae92e4a4abab90ab1418
+  main3 :: [GHC.Types.Char]
+  {- Unfolding: (case Main.$stypeOf4 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++ @ Data.Typeable.Internal.TypeRep trs Main.main4
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 case tc of ww6 { GHC.Types.TyCon ww7 ww8 ww9 ww10 ->
+                 Data.Typeable.Internal.$w$cshowsPrec
+                   GHC.Show.shows22
+                   ww7
+                   ww8
+                   ww10
+                   ks
+                   types
+                   (GHC.Types.[] @ GHC.Types.Char) } } } }) -}
+3d0c357af140085111397468a5e50eac
+  main30 :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main35
+                   Main.main31) -}
+2ecf455105e0b4836a0355b5ccb1b3bc
+  main31 :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main34
+                   Main.main32) -}
+59de964057b4c36bc7631df682a4f328
+  main32 :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main33
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+0565d6478924fe6b1ebbe92f3093e370
+  main33 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 't'#) -}
+c368fb038ab9dfe7b704725be956bbef
+  main34 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 's'#) -}
+0df63f424eff6506842886fe75dc9a57
+  main35 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'e'#) -}
+f3282fb73127f69903e6816411c2e7c4
+  main36 :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1,
+     Unfolding: (\ (eta1 :: GHC.Base.String) ->
+                 GHC.Show.shows_$cshowList1 Main.main_eta1 eta1) -}
+82a027823e63d7e191f888c6986daa1e
+  main37 :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows4
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+7fa58599ad758a4599f78f66bdf1c6bd
+  main38 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.main22
+                   Main.main16) -}
+743cd455c7b17ed1acc35ee5e57d174c
+  main39 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "tuple: "#
+                   Main.main40) -}
+f5fc7d8bcab5efbee894c54ec0118651
+  main4 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Main.$stypeOf2
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+88d3308094a2f1893fe6ecfaad4711f7
+  main40 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows7
+                   Main.main41) -}
+c5557286cfbbb10ec563f4fa1194f3e9
+  main41 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows6
+                   Main.main42) -}
+42e755fd36b8d14496272a26ab7ab14c
+  main42 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.showLitString
+                   Main.main_eta1
+                   Main.main43) -}
+bb72ba94087f6b5f4fe5f146bd002037
+  main43 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows6
+                   Main.main44) -}
+96775181a5486942ea7d0f91e0822df0
+  main44 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows5
+                   Main.main45) -}
+28880f1ae4b373ef3c20211b228c32a4
+  main45 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.$fShow(,)_$sgo
+                   Main.main37
+                   Main.main46
+                   (GHC.Types.[] @ GHC.Show.ShowS)) -}
+d68ece5c8c8e3363120a22aabe610c6e
+  main46 :: GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (\ (eta :: GHC.Base.String) ->
+                 letrec {
+                   go :: [GHC.Types.Char] -> [GHC.Types.Char]
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [GHC.Types.Char]) ->
+                     case ds of wild {
+                       [] -> eta : y ys -> GHC.Types.: @ GHC.Types.Char y (go ys) }
+                 } in
+                 go GHC.Show.shows17) -}
+1abbd36ed87e7cb97a22ea24bc2874fc
+  main47 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
                    Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+0ace055bdacb95cae29655af597b547d
+  main5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "tail of list of list: "#
+                   Main.main6) -}
+aeca2a3359766b6ed9cf8150ef3aa0e8
+  main6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.showList__2
+                   Main.main7) -}
+240c4833b471e0572e92095579e5303e
+  main7 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.$fShowBool_$cshowList
+                   Main.main9
+                   Main.main8) -}
+065837ec244b6a49723684fb39c235b4
+  main8 :: GHC.Base.String
+  {- Unfolding: (Main.main_showl
+                   (GHC.Types.[] @ [GHC.Types.Bool])) -}
+812869f63db17071a2c04d6e5f00de17
+  main9 :: [GHC.Types.Bool]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Bool
+                   GHC.Types.False
+                   Main.main10) -}
+e22976f526f55813603a0920168641eb
+  main_eta :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main33
+                   Main.main30) -}
+f243e649421e3ddc78015611113d40d2
+  main_eta1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "test"#) -}
+e7bf5c683a5145be8bee4a14321016ca
+  main_showl :: [[GHC.Types.Bool]] -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U> -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:
