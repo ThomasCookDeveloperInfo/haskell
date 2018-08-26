@@ -1,24 +1,21 @@
 module Main where
 
-import Lib
+import Chapter2
+import Chapter4
 import Data.Typeable
 
 main :: IO()
 main = do
-  let exampleTuple = ("test", True)
-  let exampleTriple = ([1, 2, 3], "test", ['t', 'e', 's', 't'])
-  let exampleList = [1, 2, 3]
-  let exampleListOfList = [[True], [False, False]]
-  let typeOfTuple = typeOf exampleTuple
+  print $ "myIsEmpty: " ++ show (myLength "Hello world!")
+  print $ "myIsEmpty: " ++ show (myIsEmpty "Hello world!")
 
-  putStrLn ("tuple: " ++ (show(exampleTuple)))
-  putStrLn ("triple: " ++(show(exampleTriple)))
-  putStrLn ("head list: " ++ (show(head(exampleList))))
-  putStrLn ("tail list: " ++ (show(tail(exampleList))))
-  putStrLn ("head list of list: " ++ (show(head(exampleListOfList))))
-  putStrLn ("tail of list of list: " ++ (show(tail(exampleListOfList))))
-  putStrLn ("type of tuple: " ++ show(typeOf(exampleTuple)))
+  let roomA = Location 4 "Room A" []
+  let roomB = Location 5 "Room B" []
 
-  name <- getLine
-  let greeting = greet name
-  putStrLn greeting
+  let floor1 = Location 1 "Floor 1" [roomA, roomB]
+  let floor2 = Location 2 "Floor 2" [roomA, roomB]
+  let floor3 = Location 3 "Floor 3" [roomA, roomB]
+
+  let workspace = Location 0 "Newcastle Office" [floor1, floor2]
+
+  print $ findWorkspace 5 [workspace]

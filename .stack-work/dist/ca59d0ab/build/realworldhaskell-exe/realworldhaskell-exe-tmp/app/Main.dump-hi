@@ -1,0 +1,244 @@
+
+==================== FINAL INTERFACE ====================
+2018-08-26 17:31:19.0477029 UTC
+
+interface main@main:Main 8002
+  interface hash: fb95242fd05e6c0e55a90cb89037c748
+  ABI hash: b5afb441224a615e7b134409647082e2
+  export-list hash: 157f8159541176b92533c32de01a48fb
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1b53df241ee70212234d35378f1d2249
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+                      realworldhaskell-0.1.0.0@realworldhaskell-0.1.0.0-CFBhzg8kpWP4Csw99eH4yN
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Typeable ed8bc8c2e567dfb5847129d505565a21
+import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
+import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  realworldhaskell-0.1.0.0@realworldhaskell-0.1.0.0-CFBhzg8kpWP4Csw99eH4yN:Chapter2 6575c109b662c2fa24c9629fd9c9fe89
+import  -/  realworldhaskell-0.1.0.0@realworldhaskell-0.1.0.0-CFBhzg8kpWP4Csw99eH4yN:Chapter4 c715effca3345d8772b0478dc602e2d1
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+0f68045e8c943925d6793b95e263c10b
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+2ef6306f860c0348758f6cd88d95b0b9
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main25
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main21
+                        GHC.Types.True
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Main.main2
+                   GHC.Types.True
+                   ipv2 } }) -}
+9f314275e4b5bea51be57dc306f1aaa7
+  main10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Room B"#) -}
+c34437158aec15cd9ea4bd4fb8f52f57
+  main11 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5#) -}
+37613b7198d7377dbaeb93ce72e93d56
+  main12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Room A"#) -}
+22b3c406e45c2290de11d237bcc65c7c
+  main13 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4#) -}
+ec44c59f9721702c6028ca36478e1db3
+  main14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Floor 2"#) -}
+a1a4fe42ed5adb242ca7dcb81461f4a3
+  main15 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 2#) -}
+0a3512dcde8afd33ba1d20f6444eebd1
+  main16 :: Chapter2.Workspace
+  {- Unfolding: (Chapter2.Location
+                   Main.main18
+                   Main.main17
+                   Main.main8) -}
+380d29cee78816419a8a59896105f9c7
+  main17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Floor 1"#) -}
+8388a91214d08b5ffecbcf3342d72de6
+  main18 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 1#) -}
+46cab55ee51679da243bb0515bb1076e
+  main19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Newcastle Office"#) -}
+523558976a2a47b9950c6fca8814e66e
+  main2 :: GHC.Base.String
+  {- Unfolding: (case Chapter2.findWorkspace
+                        Main.main11
+                        Main.main3 of wild {
+                   GHC.Base.Nothing -> GHC.Show.$fShowMaybe3
+                   GHC.Base.Just b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        GHC.Show.$fShowMaybe1
+                        (case b1 of ww2 { Chapter2.Location ww3 ww4 ww5 ->
+                         Chapter2.$w$cshowsPrec
+                           11#
+                           ww3
+                           ww4
+                           ww5
+                           (GHC.Types.[] @ GHC.Types.Char) }) }) -}
+5d8694e2f65937792b0d569b10cee4f3
+  main20 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 0#) -}
+cf5d48d0f4c19a2cda71ff3f6a352f24
+  main21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows6
+                   Main.main22) -}
+74eb4f491f403db95352b85bccf4ce8f
+  main22 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.showLitString Main.main24 Main.main23) -}
+8a162e9a9916ea2da5cd95723f7945bc
+  main23 :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows6
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+e5497318e3d38c0d2d32d0ffd4037e13
+  main24 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "myIsEmpty: "#
+                   GHC.Show.shows18) -}
+83eae0d206f299554bd83e5148a5d31f
+  main25 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows6
+                   Main.main26) -}
+72de1a8e59ef700e24c87646e90c0cb0
+  main26 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.showLitString Main.main27 Main.main23) -}
+e4d43b3aea31d0bbc900f9196be8b5d4
+  main27 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "myIsEmpty: "#
+                   Main.main28) -}
+5a0dc5a214be7d4ea4056fb6aaf3a850
+  main28 :: [GHC.Types.Char]
+  {- Unfolding: (case Chapter4.myLength1
+                        @ GHC.Types.Char
+                        Main.main29 of ww { DEFAULT ->
+                 case GHC.Show.$wshowSignedInt
+                        0#
+                        ww
+                        (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                 GHC.Types.: @ GHC.Types.Char ww5 ww6 } }) -}
+5c771a0704a816058a4479457cd3273d
+  main29 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Hello world!"#) -}
+2e5ef7802330d2e6cc354fbd7ed711f6
+  main3 :: [Chapter2.Workspace]
+  {- Unfolding: (GHC.Types.:
+                   @ Chapter2.Workspace
+                   Main.main4
+                   (GHC.Types.[] @ Chapter2.Workspace)) -}
+fb6e5146440cdbb50872ab306ac15311
+  main30 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+bde28f14e49c8358e0369da77ce9d9a5
+  main4 :: Chapter2.Workspace
+  {- Unfolding: (Chapter2.Location
+                   Main.main20
+                   Main.main19
+                   Main.main5) -}
+f5486267406882682e0ecf952ae0f421
+  main5 :: [Chapter2.Workspace]
+  {- Unfolding: (GHC.Types.:
+                   @ Chapter2.Workspace
+                   Main.main16
+                   Main.main6) -}
+0911c05dca9056bf15fea6a9f8002b4d
+  main6 :: [Chapter2.Workspace]
+  {- Unfolding: (GHC.Types.:
+                   @ Chapter2.Workspace
+                   Main.main7
+                   (GHC.Types.[] @ Chapter2.Workspace)) -}
+dd319d09776311a19b94a133a4fd8ff1
+  main7 :: Chapter2.Workspace
+  {- Unfolding: (Chapter2.Location
+                   Main.main15
+                   Main.main14
+                   Main.main8) -}
+5a9f0c95a293b5986074c3489d9084fa
+  main8 :: [Chapter2.Workspace]
+  {- Unfolding: (GHC.Types.:
+                   @ Chapter2.Workspace
+                   Main.main_roomA
+                   Main.main9) -}
+9fd1bf6d79bd88582682e39e281df40f
+  main9 :: [Chapter2.Workspace]
+  {- Unfolding: (GHC.Types.:
+                   @ Chapter2.Workspace
+                   Main.main_roomB
+                   (GHC.Types.[] @ Chapter2.Workspace)) -}
+196919054220d811564e5753e756482c
+  main_roomA :: Chapter2.Workspace
+  {- Strictness: m,
+     Unfolding: (Chapter2.Location
+                   Main.main13
+                   Main.main12
+                   (GHC.Types.[] @ Chapter2.Workspace)) -}
+2cffdba876fcd9d5d98ceb33ddf95eec
+  main_roomB :: Chapter2.Workspace
+  {- Strictness: m,
+     Unfolding: (Chapter2.Location
+                   Main.main11
+                   Main.main10
+                   (GHC.Types.[] @ Chapter2.Workspace)) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

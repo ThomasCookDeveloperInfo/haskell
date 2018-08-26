@@ -1,0 +1,91 @@
+
+==================== FINAL INTERFACE ====================
+2018-08-25 18:02:50.6303008 UTC
+
+interface testHaskell-0.1.0.0-DDHc0VNv3ysIgqjXjB5DvZ:Training 8002
+  interface hash: 39cebcfe147db625a691ace9d6769d56
+  ABI hash: 8fdf2cb453f32ed8c3ac4681570ca0d6
+  export-list hash: 01a409e5c7b7e5af127b2d7fd08efcaf
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8b9d12607d844ec5a945f13edb7c4296
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Training.train
+module dependencies:
+package dependencies: Win32-2.3.1.1@Win32-2.3.1.1
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0*
+                      bytestring-0.10.8.1@bytestring-0.10.8.1*
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog*
+                      time-1.6.0.1@time-1.6.0.1
+                      zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
+import  -/  base-4.9.1.0:Control.Monad f915f187cea611986ebb12dbc69279ab
+import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
+import  -/  base-4.9.1.0:Data.Functor 682cc832c233b71cec70179490a08631
+import  -/  base-4.9.1.0:Data.List 7349774f430841349c90dfd1144aea97
+import  -/  base-4.9.1.0:Data.OldList c9282ee91951bdcbd918d2960562c007
+import  -/  base-4.9.1.0:Data.Ord 8353f3682e7412e8b5cbc6269dc48c53
+import  -/  base-4.9.1.0:Data.Traversable 078621b399ac9374b02f3f2ce55a08e9
+import  -/  base-4.9.1.0:Data.Tuple b07f695e7ce8fe20cc8a32abf62f60ec
+import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
+import  -/  base-4.9.1.0:GHC.Enum 3beb5abd88e2173130728ffba8194381
+import  -/  base-4.9.1.0:GHC.Float b620368aab866c2bb9d3a0a459566b84
+import  -/  base-4.9.1.0:GHC.List d11eb227c1c6fbfd89bb781d72eaea0d
+import  -/  base-4.9.1.0:GHC.Num 38b8aac8807c096c7f3ca3c1eff02939
+import  -/  base-4.9.1.0:GHC.Real b88ae4a48c079652623073a5bbf5c9b0
+import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
+import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Lazy a933f8de698ac656298f2d79daa92bb5
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog:System.Random 4c90117f915e12291e0c5f588320bf66
+import  -/  zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.GZip d857081aa5810b7619d9a77c7a9cc337
+3d4f6dec4e7a28af0032f81eb5903af1
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Training.$trModule2
+                   Training.$trModule1) -}
+41f8214b6b192e388e18e30bc934bb2b
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Training"#) -}
+212dbe18d4b0d1d9c76477447892f47c
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "testHaskell-0.1.0.0-DDHc0VNv3ysIgqjXjB5DvZ"#) -}
+a5915ec4a74b0bd0e15dd6c6733d7049
+  train :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Training.train1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+04c7b47eead0a19be1c95de229f6a988
+  train1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

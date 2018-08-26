@@ -1,0 +1,166 @@
+
+==================== FINAL INTERFACE ====================
+2018-08-26 17:23:39.2169931 UTC
+
+interface realworldhaskell-0.1.0.0-CFBhzg8kpWP4Csw99eH4yN:Chapter2 8002
+  interface hash: e55a1be57bb3028c905d739ac2bd5882
+  ABI hash: 6575c109b662c2fa24c9629fd9c9fe89
+  export-list hash: 847bb80b9d2fe748310d89e01f45a1fc
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8b9d12607d844ec5a945f13edb7c4296
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Chapter2.findWorkspace
+  Chapter2.Workspace{Chapter2.Location key locations name}
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
+import  -/  base-4.9.1.0:Data.Maybe ecf0c6f81372d9b58b142d5e758ea51b
+import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
+import  -/  base-4.9.1.0:GHC.List d11eb227c1c6fbfd89bb781d72eaea0d
+import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
+7057b8ae9e173dee0030145e526335fa
+  $fShowWorkspace :: GHC.Show.Show Chapter2.Workspace
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Chapter2.Workspace
+                  Chapter2.$fShowWorkspace_$cshowsPrec
+                  Chapter2.$fShowWorkspace_$cshow
+                  Chapter2.$fShowWorkspace_$cshowList -}
+7057b8ae9e173dee0030145e526335fa
+  $fShowWorkspace1 :: Chapter2.Workspace -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Chapter2.Workspace) (w1 :: GHC.Base.String) ->
+                 case w of ww { Chapter2.Location ww1 ww2 ww3 ->
+                 Chapter2.$w$cshowsPrec 0# ww1 ww2 ww3 w1 }) -}
+7057b8ae9e173dee0030145e526335fa
+  $fShowWorkspace_$cshow :: Chapter2.Workspace -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U(U),1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Chapter2.Workspace) ->
+                 Chapter2.$fShowWorkspace_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+7057b8ae9e173dee0030145e526335fa
+  $fShowWorkspace_$cshowList ::
+    [Chapter2.Workspace] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Chapter2.Workspace
+                   Chapter2.$fShowWorkspace1) -}
+7057b8ae9e173dee0030145e526335fa
+  $fShowWorkspace_$cshowsPrec ::
+    GHC.Types.Int -> Chapter2.Workspace -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U(U),1*U,1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Chapter2.Workspace)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Chapter2.Location ww3 ww4 ww5 ->
+                 Chapter2.$w$cshowsPrec ww1 ww3 ww4 ww5 w2 } }) -}
+6ddf573bc0566b01002f9ac2182d7644
+  $tc'Location :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15722512345208485987##
+                   11666074148871936464##
+                   Chapter2.$trModule
+                   Chapter2.$tc'Location1) -}
+78f05aed17776dee2027e8c778ea5478
+  $tc'Location1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Location"#) -}
+b23cd77eda3d8069aa9648d62eedb9de
+  $tcWorkspace :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5239511750475894061##
+                   6409864369630173559##
+                   Chapter2.$trModule
+                   Chapter2.$tcWorkspace1) -}
+4b886aa4ac5f4fdb9e5ac087e6dd0fec
+  $tcWorkspace1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Workspace"#) -}
+2f19453b7769ce404af1b636475af1b2
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Chapter2.$trModule2
+                   Chapter2.$trModule1) -}
+b1d994826202c370eafd480ea84a8efb
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Chapter2"#) -}
+f79c1e147f249a35a66e9be6120d50ee
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "realworldhaskell-0.1.0.0-CFBhzg8kpWP4Csw99eH4yN"#) -}
+7057b8ae9e173dee0030145e526335fa
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Base.String
+    -> [Chapter2.Workspace]
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 5, Strictness: <S,U><L,1*U(U)><L,1*U><L,1*U><L,U>,
+     Inline: [0] -}
+7057b8ae9e173dee0030145e526335fa
+  data Workspace
+    = Location {key :: GHC.Types.Int,
+                name :: GHC.Base.String,
+                locations :: [Chapter2.Workspace]}
+    RecFlag: Recursive
+b7c6e3d22f11a5d9f53bdaebfb31e2e7
+  findWorkspace ::
+    GHC.Types.Int
+    -> [Chapter2.Workspace] -> GHC.Base.Maybe Chapter2.Workspace
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(U)><S,U> -}
+52d82c1b6c87a32cb6ecd3c81ad593b3
+  key :: Chapter2.Workspace -> GHC.Types.Int
+  RecSel Left Chapter2.Workspace
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U(U),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Chapter2.Workspace) ->
+                 case ds of wild { Chapter2.Location ds1 ds2 ds3 -> ds1 }) -}
+4f255828d5939e94a3b43c2d0609c7c0
+  locations :: Chapter2.Workspace -> [Chapter2.Workspace]
+  RecSel Left Chapter2.Workspace
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Chapter2.Workspace) ->
+                 case ds of wild { Chapter2.Location ds1 ds2 ds3 -> ds3 }) -}
+eded545070ae0bb9ed0fb6ceac2e5b87
+  name :: Chapter2.Workspace -> GHC.Base.String
+  RecSel Left Chapter2.Workspace
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Chapter2.Workspace) ->
+                 case ds of wild { Chapter2.Location ds1 ds2 ds3 -> ds2 }) -}
+instance [safe] GHC.Show.Show [Chapter2.Workspace]
+  = Chapter2.$fShowWorkspace
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
