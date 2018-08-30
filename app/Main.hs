@@ -2,6 +2,7 @@ module Main where
 
 import Chapter2
 import Chapter4
+import Training
 import Data.Typeable
 
 main :: IO()
@@ -19,3 +20,11 @@ main = do
   let workspace = Location 0 "Newcastle Office" [floor1, floor2]
 
   print $ findWorkspace 5 [workspace]
+
+  let inputs = randomInputs 3
+  let weights = randomWeights 3 3
+  let forwardPass = forwardPassLayer inputs weights
+
+  print inputs
+  print weights
+  print forwardPass

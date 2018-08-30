@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2018-08-26 17:38:49.5068142 UTC
+2018-08-29 20:50:14.9256843 UTC
 
-interface realworldhaskell-0.1.0.0-CFBhzg8kpWP4Csw99eH4yN:Kmeans 8002
-  interface hash: 585b890e3ccaa51911717c355e477d0f
-  ABI hash: 265814d48cfdf487c1cc18a5e590ec49
-  export-list hash: 88ac05b823a271f736aa7ebcb2466525
+interface realworldhaskell-0.1.0.0-CL4wTfgpaBMAu0LmMG20cc:Kmeans 8002
+  interface hash: bf9440468a97594e4f0e2b7b52c41391
+  ABI hash: 44d12d7cf00b911890173433940681dd
+  export-list hash: 29ea727b0b4156ff2d70c7f2a4625c37
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 8b9d12607d844ec5a945f13edb7c4296
   sig of: Nothing
@@ -41,24 +41,24 @@ import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base dfcca0a6b3fe956067f7db6df4d400c2
 import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Strict 5978345e8d03c94ea37df1bd4052990d
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
-153f38625975dab657d23eada2211ced
+47d84df588c043656e64f8f07e822708
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    Kmeans.$trModule2
                    Kmeans.$trModule1) -}
-8975e6a4af17d949427744cfb593fe45
+fcd1d6bfb86beab9b4c758245bb203cc
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Kmeans"#) -}
-5ad3b410065d5d3c02b3a8264b29fd25
+f47fb15e97fba1b9c9624a10664ec662
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "realworldhaskell-0.1.0.0-CFBhzg8kpWP4Csw99eH4yN"#) -}
-2b90381793fd7b8589e97778b119f5bf
+                   "realworldhaskell-0.1.0.0-CL4wTfgpaBMAu0LmMG20cc"#) -}
+961fe7d59b5cd42908360d2595d4d29c
   type Cluster = [Kmeans.Vec]
-fa1dc6a19b19b7d1901ca86bd3e9c60f
+874386c3580fcb161bc7b3ad7e258524
   type Vec = [GHC.Types.Float]
 vectorised variables:
 vectorised tycons:

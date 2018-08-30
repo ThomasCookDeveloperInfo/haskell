@@ -1,0 +1,6 @@
+[1 of 2] Compiling Main             ( C:\Users\info\AppData\Local\Temp\stack7696\cairo-0.13.3.1\Setup.hs, C:\Users\info\AppData\Local\Temp\stack7696\cairo-0.13.3.1\.stack-work\dist\ca59d0ab\setup\Main.o )
+[2 of 2] Compiling StackSetupShim   ( C:\sr\setup-exe-src\setup-shim-Z6RU0evB.hs, C:\Users\info\AppData\Local\Temp\stack7696\cairo-0.13.3.1\.stack-work\dist\ca59d0ab\setup\StackSetupShim.o )
+Linking C:\Users\info\AppData\Local\Temp\stack7696\cairo-0.13.3.1\.stack-work\dist\ca59d0ab\setup\setup.exe ...
+Configuring cairo-0.13.3.1...
+setup.exe: The program 'pkg-config' version >=0.9.0 is required but it could
+not be found.

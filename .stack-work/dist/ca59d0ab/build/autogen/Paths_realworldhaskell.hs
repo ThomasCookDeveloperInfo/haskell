@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "C:\\Users\\info\\Desktop\\Projects\\haskell\\.stack-work\\install\\6c953ab2\\bin"
-libdir     = "C:\\Users\\info\\Desktop\\Projects\\haskell\\.stack-work\\install\\6c953ab2\\lib\\x86_64-windows-ghc-8.0.2\\realworldhaskell-0.1.0.0-CFBhzg8kpWP4Csw99eH4yN"
+libdir     = "C:\\Users\\info\\Desktop\\Projects\\haskell\\.stack-work\\install\\6c953ab2\\lib\\x86_64-windows-ghc-8.0.2\\realworldhaskell-0.1.0.0-CL4wTfgpaBMAu0LmMG20cc"
 dynlibdir  = "C:\\Users\\info\\Desktop\\Projects\\haskell\\.stack-work\\install\\6c953ab2\\lib\\x86_64-windows-ghc-8.0.2"
 datadir    = "C:\\Users\\info\\Desktop\\Projects\\haskell\\.stack-work\\install\\6c953ab2\\share\\x86_64-windows-ghc-8.0.2\\realworldhaskell-0.1.0.0"
 libexecdir = "C:\\Users\\info\\Desktop\\Projects\\haskell\\.stack-work\\install\\6c953ab2\\libexec"

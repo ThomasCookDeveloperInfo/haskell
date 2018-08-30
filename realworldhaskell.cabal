@@ -18,8 +18,13 @@ library
   exposed-modules:     Chapter2
                      , Chapter4
                      , Kmeans
+                     , Training
   build-depends:       base >= 4.7 && < 5
                      , containers
+                     , mtl
+                     , matrix
+                     , bed-and-breakfast
+                     , random
   default-language:    Haskell2010
 
 executable realworldhaskell-exe

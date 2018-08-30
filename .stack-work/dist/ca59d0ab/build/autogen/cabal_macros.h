@@ -14,12 +14,40 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 1)
 
+/* package bed-and-breakfast-0.1.2 */
+#define VERSION_bed_and_breakfast "0.1.2"
+#define MIN_VERSION_bed_and_breakfast(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  1 || \
+  (major1) == 0 && (major2) == 1 && (minor) <= 2)
+
 /* package containers-0.5.7.1 */
 #define VERSION_containers "0.5.7.1"
 #define MIN_VERSION_containers(major1,major2,minor) (\
   (major1) <  0 || \
   (major1) == 0 && (major2) <  5 || \
   (major1) == 0 && (major2) == 5 && (minor) <= 7)
+
+/* package matrix-0.3.5.0 */
+#define VERSION_matrix "0.3.5.0"
+#define MIN_VERSION_matrix(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  3 || \
+  (major1) == 0 && (major2) == 3 && (minor) <= 5)
+
+/* package mtl-2.2.1 */
+#define VERSION_mtl "2.2.1"
+#define MIN_VERSION_mtl(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  2 || \
+  (major1) == 2 && (major2) == 2 && (minor) <= 1)
+
+/* package random-1.1 */
+#define VERSION_random "1.1"
+#define MIN_VERSION_random(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  1 || \
+  (major1) == 1 && (major2) == 1 && (minor) <= 0)
 
 /* tool alex-3.2.1 */
 #define TOOL_VERSION_alex "3.2.1"
@@ -91,7 +119,7 @@
   (major1) == 2 && (major2) <  25 || \
   (major1) == 2 && (major2) == 25 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "realworldhaskell-0.1.0.0-CFBhzg8kpWP4Csw99eH4yN"
+#define CURRENT_COMPONENT_ID "realworldhaskell-0.1.0.0-CL4wTfgpaBMAu0LmMG20cc"
 
-#define CURRENT_PACKAGE_KEY "realworldhaskell-0.1.0.0-CFBhzg8kpWP4Csw99eH4yN"
+#define CURRENT_PACKAGE_KEY "realworldhaskell-0.1.0.0-CL4wTfgpaBMAu0LmMG20cc"
 

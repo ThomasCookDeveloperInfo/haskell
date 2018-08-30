@@ -1,2 +1,4 @@
+import Training
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = print (activate [0.0, 1.0], [0.2, 0.7] leakyRelu)
