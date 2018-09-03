@@ -4,15 +4,14 @@ module Training (randomWeights, activate, cost) where
   import System.Random
 
   activate :: [Double] -> [Matrix Double] -> Matrix Double
-  activate i weights = outputs where
+  activate i weights = forwardPass inputs weights where
     inputSize = length i
     inputs = fromList 1 inputSize i
-    outputs = forwardPass inputs weights where
-      forwardPass inputs weights
-        | length weights == 1 = squashedOutputs
-        | otherwise = forwardPass (squashedOutputs) (tail weights)
-        where
-          squashedOutputs = mapPos (\(row, col) a -> leakyRelu a) layerOutputs
+    forwardPass inputs weights
+      | length weights == 1 = squashedOutputs
+      | otherwise = forwardPass (squashedOutputs) (tail weights)
+      where
+        squashedOutputs = mapPos (\(row, col) a -> leakyRelu a) layerOutputs where
           layerOutputs = multStd2 inputs (head weights)
           leakyRelu a
             | a > 0.0 = a

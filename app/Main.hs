@@ -29,11 +29,10 @@ module Main where
     generator <- newStdGen
 
     let inputWeights = randomWeights generator (length inputs) 3
-    let hiddenWeights = randomWeights generator 3 4
-    let hiddenWeights2 = randomWeights generator 4 3
-    let outputWeights = randomWeights generator 3 1
+    let hiddenWeights = randomWeights generator 3 1
+    let outputWeights = randomWeights generator 1 1
 
-    let outputs = activate inputs [inputWeights, hiddenWeights, hiddenWeights2, outputWeights]
+    let outputs = activate inputs [inputWeights, hiddenWeights, outputWeights]
 
     let c = cost expected (head (toList outputs))
 
