@@ -1,4 +1,4 @@
-module Training (forwardPass) where
+module Training (randomWeights, activate, forwardPass) where
 
   import Data.Matrix
   import System.Random
@@ -7,22 +7,16 @@ module Training (forwardPass) where
   leakyRelu a | a > 0.0 = a
               | otherwise = 0.01 * a
 
-  forwardPass :: (RandomGen g) => g -> [Double] -> Int -> Int -> Matrix Double
-  forwardPass generator i hiddenSize outputSize = outputs where
+  activate :: [Double] -> [Matrix Double] -> Matrix Double
+  activate i weights = outputs where
     inputSize = length i
-    inputs = fromList 1 inputSize  i
-    outputs = forwardPassLayer hiddenOutputs outputWeights where
-      outputWeights = randomWeights generator outputSize 1
-      hiddenOutputs = forwardPassLayer inputOutputs hiddenWeights where
-        hiddenWeights = randomWeights generator hiddenSize outputSize
-        inputOutputs = forwardPassLayer inputs inputWeights where
-          inputWeights = randomWeights generator inputSize hiddenSize
+    inputs = fromList 1 inputSize i
+    outputs = forwardPass inputs weights
 
-
-  forwardPassLayer :: Matrix Double -> Matrix Double -> Matrix Double
-  forwardPassLayer inputs weights = outputs where
-    outputs = mapPos (\(row, col) a -> leakyRelu a) multipliedMatrix where
-      multipliedMatrix = multStd2 inputs weights
+  forwardPass :: Matrix Double -> [Matrix Double] -> Matrix Double
+  forwardPass inputs weights
+    | length weights == 1 = mapPos (\(row, col) a -> leakyRelu a) (multStd2 inputs (head weights))
+    | otherwise = forwardPass (mapPos (\(row, col) a -> leakyRelu a) (multStd2 inputs (head weights))) (tail weights)
 
   randomWeights :: (RandomGen g) => g -> Int -> Int -> Matrix Double
   randomWeights generator inputSize outputSize = weights where

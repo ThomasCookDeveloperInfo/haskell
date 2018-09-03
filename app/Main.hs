@@ -26,7 +26,11 @@ module Main where
 
     generator <- newStdGen
 
-    let outputs = forwardPass generator inputs 2 1
+    let inputWeights = randomWeights generator (length inputs) 3
+    let hiddenWeights = randomWeights generator 3 1
+    let outputWeights = randomWeights generator 1 1
+
+    let outputs = activate inputs [inputWeights, hiddenWeights, outputWeights]
 
     print inputs
     print outputs
