@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2018-09-03 19:09:19.674294 UTC
+2018-09-03 20:40:41.4479268 UTC
 
 interface realworldhaskell-0.1.0.0-8ARNQ4a1evNKDWjfxLC5zs:Training 8043
-  interface hash: 91c5250ddf1d7093c6b56f4cf6887894
-  ABI hash: 7da09346a728d9cff06007ce015d1ce8
-  export-list hash: b936526ab2ecbaff61eed6d00c039a23
+  interface hash: e319b559d658712082df30668901a06c
+  ABI hash: 73ba78f17fb844f81e46fa9f3eb367eb
+  export-list hash: b5f75b6221938c94c6a914893e68a6af
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 571088946829602ed0a772276646e44d
   opt_hash: 14e536840aca4e889cad654e6f9b79c1
@@ -15,7 +15,7 @@ interface realworldhaskell-0.1.0.0-8ARNQ4a1evNKDWjfxLC5zs:Training 8043
   where
 exports:
   Training.activate
-  Training.forwardPass
+  Training.cost
   Training.randomWeights
 module dependencies:
 package dependencies: Win32-2.6.1.0 array-0.5.2.0 base-4.11.1.0
@@ -70,156 +70,7 @@ a3ea34cc37b78d1da1e6f267653bbd05
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs,
      Unfolding: ("realworldhaskell-0.1.0.0-8ARNQ4a1evNKDWjfxLC5zs"#) -}
-7f9b41d10e73ac6e64d94b8c0855a30c
-  $wactivate ::
-    [GHC.Types.Double]
-    -> [Data.Matrix.Matrix GHC.Types.Double]
-    -> (# GHC.Prim.Int#, GHC.Prim.Int#, GHC.Prim.Int#, GHC.Prim.Int#,
-          GHC.Prim.Int#, Data.Vector.Vector GHC.Types.Double #)
-  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0],
-     Unfolding: (\ (w :: [GHC.Types.Double])
-                   (w1 :: [Data.Matrix.Matrix GHC.Types.Double]) ->
-                 case GHC.List.$wlenAcc @ GHC.Types.Double w 0# of ww2 { DEFAULT ->
-                 Training.$wforwardPass
-                   1#
-                   ww2
-                   0#
-                   0#
-                   ww2
-                   (case GHC.Magic.runRW#
-                           @ ('GHC.Types.TupleRep
-                                '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
-                           @ (# GHC.Prim.State# GHC.Prim.RealWorld,
-                                Data.Vector.Vector GHC.Types.Double #)
-                           (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                            let {
-                              $j :: GHC.Prim.Int#
-                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-                                          Data.Vector.Vector GHC.Types.Double #)
-                                <join 1> {- Arity: 1, Strictness: <S,U> -}
-                              = \ (n# :: GHC.Prim.Int#)[OneShot] ->
-                                case GHC.Prim.newArray#
-                                       @ GHC.Types.Double
-                                       @ (Control.Monad.Primitive.PrimState
-                                            (GHC.ST.ST GHC.Prim.RealWorld))
-                                       n#
-                                       (Data.Vector.Mutable.uninitialised @ GHC.Types.Double)
-                                       s1
-                                         `cast`
-                                       (GHC.Prim.State#
-                                          (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
-                                                    <GHC.Prim.RealWorld>_N)))_R of ds2 { (#,#) ipv ipv1 ->
-                                let {
-                                  exit :: GHC.Prim.Int#
-                                          -> GHC.Prim.State# GHC.Prim.RealWorld
-                                          -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-                                                Data.Vector.Vector GHC.Types.Double #)
-                                    <join 2> {- Arity: 2, Strictness: <L,U><S,U> -}
-                                  = \ (ww :: GHC.Prim.Int#)[OneShot]
-                                      (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                                    case GHC.Prim.unsafeFreezeArray#
-                                           @ (Control.Monad.Primitive.PrimState
-                                                (GHC.ST.ST GHC.Prim.RealWorld))
-                                           @ GHC.Types.Double
-                                           ipv1
-                                           w2
-                                             `cast`
-                                           (GHC.Prim.State#
-                                              (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
-                                                        <GHC.Prim.RealWorld>_N)))_R of ds1 { (#,#) ipv2 ipv3 ->
-                                    (# ipv2
-                                         `cast`
-                                       (GHC.Prim.State#
-                                          (Control.Monad.Primitive.D:R:PrimStateST[0]
-                                               <GHC.Prim.RealWorld>_N))_R,
-                                       Data.Vector.Vector @ GHC.Types.Double 0# ww ipv3 #) }
-                                } in
-                                let {
-                                  exit1 :: GHC.Prim.Int#
-                                           -> GHC.Prim.State# GHC.Prim.RealWorld
-                                           -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-                                                 Data.Vector.Vector GHC.Types.Double #)
-                                    <join 2> {- Arity: 2, Strictness: <L,U><S,U> -}
-                                  = \ (ww :: GHC.Prim.Int#)[OneShot]
-                                      (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                                    case GHC.Prim.unsafeFreezeArray#
-                                           @ (Control.Monad.Primitive.PrimState
-                                                (GHC.ST.ST GHC.Prim.RealWorld))
-                                           @ GHC.Types.Double
-                                           ipv1
-                                           w2
-                                             `cast`
-                                           (GHC.Prim.State#
-                                              (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
-                                                        <GHC.Prim.RealWorld>_N)))_R of ds1 { (#,#) ipv2 ipv3 ->
-                                    (# ipv2
-                                         `cast`
-                                       (GHC.Prim.State#
-                                          (Control.Monad.Primitive.D:R:PrimStateST[0]
-                                               <GHC.Prim.RealWorld>_N))_R,
-                                       Data.Vector.Vector @ GHC.Types.Double 0# ww ipv3 #) }
-                                } in
-                                letrec {
-                                  $wfoldlM'_loop :: GHC.Types.SPEC
-                                                    -> GHC.Prim.Int#
-                                                    -> [GHC.Types.Double]
-                                                    -> GHC.Prim.Int#
-                                                    -> GHC.Prim.State# GHC.Prim.RealWorld
-                                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-                                                          Data.Vector.Vector GHC.Types.Double #)
-                                    <join 5> {- Arity: 5, Strictness: <S,1*U><S,U><L,1*U><S,U><S,U>,
-                                                Inline: [0] -}
-                                  = \ (w2 :: GHC.Types.SPEC)
-                                      (ww :: GHC.Prim.Int#)
-                                      (ww1 :: [GHC.Types.Double])
-                                      (ww3 :: GHC.Prim.Int#)
-                                      (w3 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                                    case w2 of ds5 { DEFAULT ->
-                                    case GHC.Prim.<=# ww3 0# of lwild {
-                                      DEFAULT
-                                      -> case ww1 of wild2 {
-                                           [] -> exit ww w3
-                                           : x xs1
-                                           -> case GHC.Prim.writeArray#
-                                                     @ (Control.Monad.Primitive.PrimState
-                                                          (GHC.ST.ST GHC.Prim.RealWorld))
-                                                     @ GHC.Types.Double
-                                                     ipv1
-                                                     ww
-                                                     x
-                                                     w3
-                                                       `cast`
-                                                     (GHC.Prim.State#
-                                                        (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
-                                                                  <GHC.Prim.RealWorld>_N)))_R of s'# { DEFAULT ->
-                                              $wfoldlM'_loop
-                                                GHC.Types.SPEC
-                                                (GHC.Prim.+# ww 1#)
-                                                xs1
-                                                (GHC.Prim.-# ww3 1#)
-                                                s'#
-                                                  `cast`
-                                                (GHC.Prim.State#
-                                                   (Control.Monad.Primitive.D:R:PrimStateST[0]
-                                                        <GHC.Prim.RealWorld>_N))_R } }
-                                      1# -> exit1 ww w3 } }
-                                } in
-                                $wfoldlM'_loop
-                                  GHC.Types.SPEC
-                                  0#
-                                  w
-                                  ww2
-                                  ipv
-                                    `cast`
-                                  (GHC.Prim.State#
-                                     (Control.Monad.Primitive.D:R:PrimStateST[0]
-                                          <GHC.Prim.RealWorld>_N))_R }
-                            } in
-                            case GHC.Prim.<=# ww2 0# of lwild {
-                              DEFAULT -> $j ww2 1# -> $j 0# }) of ds1 { (#,#) ipv1 ipv2 ->
-                    ipv2 })
-                   w1 }) -}
-b006daa9428fdd06309ed5fc6833b643
+7b98bfecdf62ca9717f311f5fdfff22c
   $wforwardPass ::
     GHC.Prim.Int#
     -> GHC.Prim.Int#
@@ -228,10 +79,9 @@ b006daa9428fdd06309ed5fc6833b643
     -> GHC.Prim.Int#
     -> Data.Vector.Vector GHC.Types.Double
     -> [Data.Matrix.Matrix GHC.Types.Double]
-    -> (# GHC.Prim.Int#, GHC.Prim.Int#, GHC.Prim.Int#, GHC.Prim.Int#,
-          GHC.Prim.Int#, Data.Vector.Vector GHC.Types.Double #)
+    -> Data.Matrix.Matrix GHC.Types.Double
   {- Arity: 7,
-     Strictness: <S,U><S,U><L,U><L,U><L,U><L,U(U,U,U)><S,U>,
+     Strictness: <S,U><S,U><L,U><L,U><L,U><L,U(U,U,U)><S,1*U>m,
      Inline: [0] -}
 290e27dd04b369d4b907cb14d994c1f8
   $wrandomWeights ::
@@ -555,46 +405,156 @@ b006daa9428fdd06309ed5fc6833b643
                                            (Control.Monad.Primitive.D:R:PrimStateST[0]
                                                 <GHC.Prim.RealWorld>_N))_R } } }) of ds1 { (#,#) ipv1 ipv2 ->
                     ipv2 } #)) -}
-144e7cd8053b060aa4979f142a204ea2
+45c1efa69bbe43c820ce08bf88c800fd
   activate ::
     [GHC.Types.Double]
     -> [Data.Matrix.Matrix GHC.Types.Double]
     -> Data.Matrix.Matrix GHC.Types.Double
-  {- Arity: 2, Strictness: <S,U><S,U>m, Inline: [0],
-     Unfolding: InlineRule (2, True, False)
-                (\ (w :: [GHC.Types.Double])
-                   (w1 :: [Data.Matrix.Matrix GHC.Types.Double]) ->
-                 case Training.$wactivate
-                        w
-                        w1 of ww { (#,,,,,#) ww1 ww2 ww3 ww4 ww5 ww6 ->
-                 Data.Matrix.M @ GHC.Types.Double ww1 ww2 ww3 ww4 ww5 ww6 }) -}
-d7782ecd2a4997859df52723709b0a07
-  forwardPass ::
-    Data.Matrix.Matrix GHC.Types.Double
-    -> [Data.Matrix.Matrix GHC.Types.Double]
-    -> Data.Matrix.Matrix GHC.Types.Double
-  {- Arity: 2, Strictness: <S(SSSSSL),1*U(U,U,U,U,U,U(U,U,U))><S,U>m,
-     Inline: [0],
-     Unfolding: InlineRule (2, True, False)
-                (\ (w :: Data.Matrix.Matrix GHC.Types.Double)
-                   (w1 :: [Data.Matrix.Matrix GHC.Types.Double]) ->
-                 case w of ww { Data.Matrix.M ww1 ww2 ww3 ww4 ww5 ww6 ->
-                 case Training.$wforwardPass
-                        ww1
-                        ww2
-                        ww3
-                        ww4
-                        ww5
-                        ww6
-                        w1 of ww7 { (#,,,,,#) ww8 ww9 ww10 ww11 ww12 ww13 ->
-                 Data.Matrix.M
-                   @ GHC.Types.Double
-                   ww8
-                   ww9
-                   ww10
-                   ww11
-                   ww12
-                   ww13 } }) -}
+  {- Arity: 2, Strictness: <S,U><S,1*U>m,
+     Unfolding: (\ (i :: [GHC.Types.Double])
+                   (weights :: [Data.Matrix.Matrix GHC.Types.Double]) ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Double i 0# of ww2 { DEFAULT ->
+                 Training.$wforwardPass
+                   1#
+                   ww2
+                   0#
+                   0#
+                   ww2
+                   (case GHC.Magic.runRW#
+                           @ ('GHC.Types.TupleRep
+                                '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                           @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                Data.Vector.Vector GHC.Types.Double #)
+                           (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                            let {
+                              $j :: GHC.Prim.Int#
+                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                          Data.Vector.Vector GHC.Types.Double #)
+                                <join 1> {- Arity: 1, Strictness: <S,U> -}
+                              = \ (n# :: GHC.Prim.Int#)[OneShot] ->
+                                case GHC.Prim.newArray#
+                                       @ GHC.Types.Double
+                                       @ (Control.Monad.Primitive.PrimState
+                                            (GHC.ST.ST GHC.Prim.RealWorld))
+                                       n#
+                                       (Data.Vector.Mutable.uninitialised @ GHC.Types.Double)
+                                       s1
+                                         `cast`
+                                       (GHC.Prim.State#
+                                          (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                    <GHC.Prim.RealWorld>_N)))_R of ds2 { (#,#) ipv ipv1 ->
+                                let {
+                                  exit :: GHC.Prim.Int#
+                                          -> GHC.Prim.State# GHC.Prim.RealWorld
+                                          -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                Data.Vector.Vector GHC.Types.Double #)
+                                    <join 2> {- Arity: 2, Strictness: <L,U><S,U> -}
+                                  = \ (ww :: GHC.Prim.Int#)[OneShot]
+                                      (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                    case GHC.Prim.unsafeFreezeArray#
+                                           @ (Control.Monad.Primitive.PrimState
+                                                (GHC.ST.ST GHC.Prim.RealWorld))
+                                           @ GHC.Types.Double
+                                           ipv1
+                                           w `cast`
+                                           (GHC.Prim.State#
+                                              (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                        <GHC.Prim.RealWorld>_N)))_R of ds1 { (#,#) ipv2 ipv3 ->
+                                    (# ipv2
+                                         `cast`
+                                       (GHC.Prim.State#
+                                          (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                               <GHC.Prim.RealWorld>_N))_R,
+                                       Data.Vector.Vector @ GHC.Types.Double 0# ww ipv3 #) }
+                                } in
+                                let {
+                                  exit1 :: GHC.Prim.Int#
+                                           -> GHC.Prim.State# GHC.Prim.RealWorld
+                                           -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                 Data.Vector.Vector GHC.Types.Double #)
+                                    <join 2> {- Arity: 2, Strictness: <L,U><S,U> -}
+                                  = \ (ww :: GHC.Prim.Int#)[OneShot]
+                                      (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                    case GHC.Prim.unsafeFreezeArray#
+                                           @ (Control.Monad.Primitive.PrimState
+                                                (GHC.ST.ST GHC.Prim.RealWorld))
+                                           @ GHC.Types.Double
+                                           ipv1
+                                           w `cast`
+                                           (GHC.Prim.State#
+                                              (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                        <GHC.Prim.RealWorld>_N)))_R of ds1 { (#,#) ipv2 ipv3 ->
+                                    (# ipv2
+                                         `cast`
+                                       (GHC.Prim.State#
+                                          (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                               <GHC.Prim.RealWorld>_N))_R,
+                                       Data.Vector.Vector @ GHC.Types.Double 0# ww ipv3 #) }
+                                } in
+                                letrec {
+                                  $wfoldlM'_loop :: GHC.Types.SPEC
+                                                    -> GHC.Prim.Int#
+                                                    -> [GHC.Types.Double]
+                                                    -> GHC.Prim.Int#
+                                                    -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                          Data.Vector.Vector GHC.Types.Double #)
+                                    <join 5> {- Arity: 5, Strictness: <S,1*U><S,U><L,1*U><S,U><S,U>,
+                                                Inline: [0] -}
+                                  = \ (w :: GHC.Types.SPEC)
+                                      (ww :: GHC.Prim.Int#)
+                                      (ww1 :: [GHC.Types.Double])
+                                      (ww3 :: GHC.Prim.Int#)
+                                      (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                                    case w of ds5 { DEFAULT ->
+                                    case GHC.Prim.<=# ww3 0# of lwild {
+                                      DEFAULT
+                                      -> case ww1 of wild2 {
+                                           [] -> exit ww w1
+                                           : x xs1
+                                           -> case GHC.Prim.writeArray#
+                                                     @ (Control.Monad.Primitive.PrimState
+                                                          (GHC.ST.ST GHC.Prim.RealWorld))
+                                                     @ GHC.Types.Double
+                                                     ipv1
+                                                     ww
+                                                     x
+                                                     w1
+                                                       `cast`
+                                                     (GHC.Prim.State#
+                                                        (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                                  <GHC.Prim.RealWorld>_N)))_R of s'# { DEFAULT ->
+                                              $wfoldlM'_loop
+                                                GHC.Types.SPEC
+                                                (GHC.Prim.+# ww 1#)
+                                                xs1
+                                                (GHC.Prim.-# ww3 1#)
+                                                s'#
+                                                  `cast`
+                                                (GHC.Prim.State#
+                                                   (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                        <GHC.Prim.RealWorld>_N))_R } }
+                                      1# -> exit1 ww w1 } }
+                                } in
+                                $wfoldlM'_loop
+                                  GHC.Types.SPEC
+                                  0#
+                                  i
+                                  ww2
+                                  ipv
+                                    `cast`
+                                  (GHC.Prim.State#
+                                     (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                          <GHC.Prim.RealWorld>_N))_R }
+                            } in
+                            case GHC.Prim.<=# ww2 0# of lwild {
+                              DEFAULT -> $j ww2 1# -> $j 0# }) of ds1 { (#,#) ipv1 ipv2 ->
+                    ipv2 })
+                   weights }) -}
+874ae25ca3c408b8a80baf8db89c4e99
+  cost :: GHC.Types.Double -> GHC.Types.Double -> GHC.Types.Double
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>m,
+     Unfolding: InlineRule (0, True, True) GHC.Float.minusDouble -}
 42c69f931a546405b668593f6ff97a2e
   randomWeights ::
     System.Random.RandomGen g =>

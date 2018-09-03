@@ -33,6 +33,7 @@ executable realworldhaskell-exe
   build-depends:       base
                       , realworldhaskell
                       , random
+                      , matrix
   default-language:    Haskell2010
 
 test-suite realworldhaskell-test

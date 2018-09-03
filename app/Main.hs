@@ -3,6 +3,7 @@ module Main where
   import Chapter2
   import Chapter4
   import Training
+  import Data.Matrix
   import Data.Typeable
   import System.Random
 
@@ -22,15 +23,21 @@ module Main where
 
     print $ findWorkspace 5 [workspace]
 
+    let expected = 0.0
     let inputs = [0, 1]
 
     generator <- newStdGen
 
     let inputWeights = randomWeights generator (length inputs) 3
-    let hiddenWeights = randomWeights generator 3 1
-    let outputWeights = randomWeights generator 1 1
+    let hiddenWeights = randomWeights generator 3 4
+    let hiddenWeights2 = randomWeights generator 4 3
+    let outputWeights = randomWeights generator 3 1
 
-    let outputs = activate inputs [inputWeights, hiddenWeights, outputWeights]
+    let outputs = activate inputs [inputWeights, hiddenWeights, hiddenWeights2, outputWeights]
+
+    let c = cost expected (head (toList outputs))
 
     print inputs
     print outputs
+
+    print $ "expected: " ++ (show expected) ++ ", actual: " ++ (show $ head (toList outputs)) ++ ", cost: " ++ (show c)

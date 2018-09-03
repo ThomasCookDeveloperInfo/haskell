@@ -44,6 +44,17 @@
   (major1) == 1 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_random */
 
+/* package matrix-0.3.6.1 */
+#ifndef VERSION_matrix
+#define VERSION_matrix "0.3.6.1"
+#endif /* VERSION_matrix */
+#ifndef MIN_VERSION_matrix
+#define MIN_VERSION_matrix(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  3 || \
+  (major1) == 0 && (major2) == 3 && (minor) <= 6)
+#endif /* MIN_VERSION_matrix */
+
 /* tool alex-3.2.1 */
 #ifndef TOOL_VERSION_alex
 #define TOOL_VERSION_alex "3.2.1"
