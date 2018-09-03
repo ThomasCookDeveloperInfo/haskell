@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2018-09-03 20:43:14.7418391 UTC
+2018-09-03 21:14:13.2721651 UTC
 
 interface main:Main 8043
-  interface hash: 4ea314d7117f19dcd3e934918e52e7e9
-  ABI hash: 6edc3063fd33f8e11d9229752739cd92
+  interface hash: 8ac8f8de7056abbb940a11c1c4de6d3f
+  ABI hash: d18b91377f22133e27aaf376c34357f1
   export-list hash: 263a3434af5e92857306ff59d6167941
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: d87f248f9ae9bc0238e4193b27a2dc68
@@ -42,9 +42,6 @@ family instance modules: base-4.11.1.0:Control.Applicative
                          primitive-0.6.3.0:Data.Primitive.Array vector-0.12.0.1:Data.Vector
 import  -/  base-4.11.1.0:Data.Foldable 6cf3e918f22d03c0870804f05cd183d1
 import  -/  base-4.11.1.0:Data.Typeable 2ebbe848f8b5e0773c8b3cfc605f82b6
-import  -/  base-4.11.1.0:GHC.Base b7dd14d8fe8d606dde5678ea6b0575e9
-import  -/  base-4.11.1.0:GHC.List 95910b50fba2204d1a3364fe070ebf2b
-import  -/  base-4.11.1.0:GHC.Show 6211aec7cccd267a5ee999e4414d7b90
 import  -/  base-4.11.1.0:Prelude aca391812f777207b15d62bb5b9feb63
 import  -/  base-4.11.1.0:System.IO 7331ec6891ba7763ad75720258619382
 import  -/  ghc-prim-0.5.2.0:GHC.Types d9b3023de7feae4a5308d643da5543f7
@@ -71,24 +68,125 @@ e5875966b74dad2d29772660b8a75e33
 d026be77cb9ced20e35a61514e0458aa
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
-b4f9ae97a091b232a88173a93240314d
+0e3f9f4273b51d4f5b70e57077fa5d59
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-529073e95d7e97cca9b9c5c633464b51
+ba25ff8861d6a40ec003ca30e33b110e
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <S,U> -}
-0424d1a3a877cf57ce74402b0e9fe252
-  main2 ::
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case System.Random.theStdGen
+                        `cast`
+                      (GHC.IORef.N:IORef[0] <System.Random.StdGen>_N) of wild { GHC.STRef.STRef r# ->
+                 case GHC.Prim.atomicModifyMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ System.Random.StdGen
+                        @ (System.Random.StdGen, System.Random.StdGen)
+                        @ System.Random.StdGen
+                        r#
+                        System.Random.newStdGen2
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of b1 { System.Random.StdGen ipv2 ipv3 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main5
+                        GHC.Types.True
+                        ipv of ds2 { (#,#) ipv4 ipv5 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (Data.Matrix.prettyMatrix
+                      @ GHC.Types.Double
+                      GHC.Float.$fShowDouble
+                      (Training.activate
+                         Main.main_inputs
+                         (GHC.Types.:
+                            @ (Data.Matrix.Matrix GHC.Types.Double)
+                            (case GHC.List.$wlenAcc
+                                    @ GHC.Types.Double
+                                    Main.main_inputs
+                                    0# of ww2 { DEFAULT ->
+                             case Training.$wrandomWeights
+                                    @ System.Random.StdGen
+                                    System.Random.$fRandomGenStdGen
+                                    b1
+                                    ww2
+                                    3# of ww4 { (#,,,,,#) ww5 ww6 ww7 ww8 ww9 ww10 ->
+                             Data.Matrix.M @ GHC.Types.Double ww5 ww6 ww7 ww8 ww9 ww10 } })
+                            (GHC.Types.:
+                               @ (Data.Matrix.Matrix GHC.Types.Double)
+                               (case Training.$wrandomWeights
+                                       @ System.Random.StdGen
+                                       System.Random.$fRandomGenStdGen
+                                       b1
+                                       3#
+                                       1# of ww4 { (#,,,,,#) ww5 ww6 ww7 ww8 ww9 ww10 ->
+                                Data.Matrix.M @ GHC.Types.Double ww5 ww6 ww7 ww8 ww9 ww10 })
+                               (GHC.Types.:
+                                  @ (Data.Matrix.Matrix GHC.Types.Double)
+                                  (case Training.$wrandomWeights
+                                          @ System.Random.StdGen
+                                          System.Random.$fRandomGenStdGen
+                                          b1
+                                          1#
+                                          1# of ww4 { (#,,,,,#) ww5 ww6 ww7 ww8 ww9 ww10 ->
+                                   Data.Matrix.M @ GHC.Types.Double ww5 ww6 ww7 ww8 ww9 ww10 })
+                                  (GHC.Types.[] @ (Data.Matrix.Matrix GHC.Types.Double)))))))
+                   GHC.Types.True
+                   ipv4 } } } }) -}
+33b4d8f8024898900fff5b22dcc9a8e3
+  main2 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.main3
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+57bbd56acddb43e9e916450e7655bd0a
+  main3 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 1.0##) -}
+d7af8fa09846058e62c9a76f6f72f582
+  main4 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 0.0##) -}
+ce0fc2c19d8b925659de16b8a52c37be
+  main5 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.showList__3
+                   Main.main6) -}
+3807e0e5ee89f865def0c709c895e18e
+  main6 :: GHC.Base.String
+  {- Unfolding: (Main.main8 Main.main7) -}
+9fc93df2038fb8e4c6e8842f7b1ba31a
+  main7 :: GHC.Base.String
+  {- Unfolding: (Main.main_showl Main.main2) -}
+37709620aad7d1046b096fff5b00d7ca
+  main8 :: GHC.Show.ShowS
+  {- Unfolding: (GHC.Float.$w$sshowSignedFloat
+                   GHC.Float.$fShowDouble2
+                   GHC.Float.minExpt
+                   0.0##) -}
+68d3129160cdfc2c2a662b7e7aa8ec4a
+  main9 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
                    Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+58781e17a9d4315eec16214baa407f5c
+  main_inputs :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.main4
+                   Main.main2) -}
+993b887cf629c964a4e9f28a3d8e6c5a
+  main_showl :: [GHC.Types.Double] -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>m2 -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:
