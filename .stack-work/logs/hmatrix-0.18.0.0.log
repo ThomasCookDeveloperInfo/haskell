@@ -1,0 +1,8 @@
+Configuring hmatrix-0.18.0.0...
+Cabal-simple_Z6RU0evB_1.24.2.0_ghc-8.0.2.exe: Missing dependencies on foreign
+libraries:
+* Missing C libraries: blas, lapack
+This problem can usually be solved by installing the system packages that
+provide these libraries (you may need the "-dev" versions). If the libraries
+are already installed but in a non-standard location then you can use the
+flags --extra-include-dirs= and --extra-lib-dirs= to specify where they are.

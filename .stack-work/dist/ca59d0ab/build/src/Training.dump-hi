@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2018-08-29 20:59:56.7594792 UTC
+2018-09-02 11:27:48.9540748 UTC
 
 interface realworldhaskell-0.1.0.0-CL4wTfgpaBMAu0LmMG20cc:Training 8002
-  interface hash: 786d20a9845747a0252cb26164da1af3
-  ABI hash: 4f7e57142b7ad374b97930f21f8fd91b
-  export-list hash: 2b1e8ab115577d97a29b129766f6c85e
+  interface hash: a50e03a146dbb06c947547c3fdbba286
+  ABI hash: b0f8dee21275272943908896ad6a2e54
+  export-list hash: b0b9f31eadcd723993274691fd982281
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 8b9d12607d844ec5a945f13edb7c4296
   sig of: Nothing
@@ -13,7 +13,6 @@ interface realworldhaskell-0.1.0.0-CL4wTfgpaBMAu0LmMG20cc:Training 8002
   where
 exports:
   Training.forwardPassLayer
-  Training.randomInputs
   Training.randomWeights
 module dependencies:
 package dependencies: Win32-2.3.1.1@Win32-2.3.1.1
@@ -125,35 +124,7 @@ d95ed7b9a6a0af222467359a960e8fcc
                       (Numeric.Matrix.D:R:MatrixDouble0[0]) of ww6 { Numeric.Matrix.DoubleMatrix ww7 ww8 ww9 ->
                  case ww8 of ww10 { GHC.Types.I# ww11 ->
                  Training.$wforwardPassLayer ww5 ww3 ww11 ww9 } } } }) -}
-19c105e022ebd94fe3a75072e9c43901
-  randomInputs ::
-    GHC.Types.Int -> Numeric.Matrix.Matrix GHC.Types.Double
-  {- Arity: 1, Strictness: <L,U(U)>,
-     Unfolding: (\ (inputSize :: GHC.Types.Int) ->
-                 let {
-                   random :: [GHC.Types.Double]
-                   = Training.randomInputs_go (System.Random.mkStdGen inputSize)
-                 } in
-                 Numeric.Matrix.$w$s_matrix
-                   @ Numeric.Matrix.Matrix
-                   Numeric.Matrix.$WDoubleMatrix
-                   inputSize
-                   Training.randomInputs1
-                   (\ (ds :: (GHC.Types.Int, GHC.Types.Int)) ->
-                    case ds of wild { (,) x y ->
-                    case x of wild1 { GHC.Types.I# x1 ->
-                    case y of wild2 { GHC.Types.I# y1 ->
-                    GHC.List.$w!!
-                      @ GHC.Types.Double
-                      random
-                      (GHC.Prim.*# x1 y1) } } })) -}
-28c1fac797612ff2ac9f87bd884264b6
-  randomInputs1 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
-45ce5f50f54593d43e14e3116029957e
-  randomInputs_go :: System.Random.StdGen -> [GHC.Types.Double]
-  {- Arity: 1, Strictness: <L,U> -}
-e315b0b6a53a289c8d93662a12eb16a0
+87bb023d969e2c0d79558036a76d3aa7
   randomWeights ::
     GHC.Types.Int
     -> GHC.Types.Int -> Numeric.Matrix.Matrix GHC.Types.Double
@@ -162,7 +133,7 @@ e315b0b6a53a289c8d93662a12eb16a0
                    (outputSize :: GHC.Types.Int) ->
                  let {
                    random :: [GHC.Types.Double]
-                   = Training.randomInputs_go
+                   = Training.randomWeights_go
                        (case inputSize of wild { GHC.Types.I# x ->
                         case outputSize of wild1 { GHC.Types.I# y ->
                         case GHC.Int.$w$cdivMod1
@@ -185,13 +156,16 @@ e315b0b6a53a289c8d93662a12eb16a0
                    inputSize
                    outputSize
                    (\ (ds :: (GHC.Types.Int, GHC.Types.Int)) ->
-                    case ds of wild { (,) x y ->
-                    case x of wild1 { GHC.Types.I# x1 ->
-                    case y of wild2 { GHC.Types.I# y1 ->
+                    case ds of wild { (,) col row ->
+                    case col of wild1 { GHC.Types.I# x ->
+                    case row of wild2 { GHC.Types.I# y ->
                     GHC.List.$w!!
                       @ GHC.Types.Double
                       random
-                      (GHC.Prim.*# x1 y1) } } })) -}
+                      (GHC.Prim.*# x y) } } })) -}
+f80c3fbeb418df363b3ca027b476e76b
+  randomWeights_go :: System.Random.StdGen -> [GHC.Types.Double]
+  {- Arity: 1, Strictness: <L,U> -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

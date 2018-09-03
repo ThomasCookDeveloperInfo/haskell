@@ -1,8 +1,8 @@
 Configuring loop-0.3.0...
-Building loop-0.3.0...
-Preprocessing library loop-0.3.0...
-[1 of 2] Compiling Control.Loop.Internal ( src\Control\Loop\Internal.hs, .stack-work\dist\ca59d0ab\build\Control\Loop\Internal.o )
-[2 of 2] Compiling Control.Loop     ( src\Control\Loop.hs, .stack-work\dist\ca59d0ab\build\Control\Loop.o )
-Installing library in
-C:\sr\snapshots\62cfb14b\lib\x86_64-windows-ghc-8.0.2\loop-0.3.0-4tGn4RSY02pFTwJ5L4CYRr
-Registering loop-0.3.0...
+Preprocessing library for loop-0.3.0..
+Building library for loop-0.3.0..
+[1 of 2] Compiling Control.Loop     ( src\Control\Loop.hs, .stack-work\dist\7d103d30\build\Control\Loop.o )
+[2 of 2] Compiling Control.Loop.Internal ( src\Control\Loop\Internal.hs, .stack-work\dist\7d103d30\build\Control\Loop\Internal.o )
+ignoring (possibly broken) abi-depends field for packages
+Installing library in C:\sr\snapshots\3fb3e05b\lib\x86_64-windows-ghc-8.4.3\loop-0.3.0-Gcl98xwz1Mc7L0xRqBlnhk
+Registering library for loop-0.3.0..

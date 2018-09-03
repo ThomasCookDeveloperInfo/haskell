@@ -21,10 +21,8 @@ main = do
 
   print $ findWorkspace 5 [workspace]
 
-  let inputs = randomInputs 3
-  let weights = randomWeights 3 3
-  let forwardPass = forwardPassLayer inputs weights
+  let inputs = [1, 2, 3, 4, 5, 6]
+  let outputs = forwardPass inputs 2 1
 
   print inputs
-  print weights
-  print forwardPass
+  print outputs

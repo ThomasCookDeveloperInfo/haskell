@@ -1,0 +1,6 @@
+Configuring storable-complex-0.2.2...
+Preprocessing library for storable-complex-0.2.2..
+Building library for storable-complex-0.2.2..
+[1 of 1] Compiling Foreign.Storable.Complex ( in-base\Foreign\Storable\Complex.hs, .stack-work\dist\5c8418a7\build\Foreign\Storable\Complex.o )
+Installing library in C:\sr\snapshots\6c3b2ac4\lib\x86_64-windows-ghc-8.2.2\storable-complex-0.2.2-4WEqCO29MfMHlD0g6H5VIw
+Registering library for storable-complex-0.2.2..

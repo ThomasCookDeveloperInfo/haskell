@@ -1,0 +1,11 @@
+Configuring bed-and-breakfast-0.4.3...
+Preprocessing library for bed-and-breakfast-0.4.3..
+Building library for bed-and-breakfast-0.4.3..
+[1 of 2] Compiling Numeric.Matrix   ( src\Numeric\Matrix.hs, .stack-work\dist\7d103d30\build\Numeric\Matrix.o )
+
+[;1msrc\Numeric\Matrix.hs:158:5: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    `typeOf' is not a (visible) method of class `Typeable'[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m158 |[0m[0m     [;1m[31mtypeOf[0m[0m x = mkTyConApp (mkTyCon3 "bed-and-breakfast"
+[;1m[34m    |[0m[0m[;1m[31m     ^^^^^^[0m[0m
+[0m[0m[0m

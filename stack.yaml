@@ -3,5 +3,5 @@ extra-package-dbs: []
 packages:
 - .
 extra-deps:
-- bed-and-breakfast-0.1.2
-resolver: lts-9.0
+  
+resolver: lts-12.6

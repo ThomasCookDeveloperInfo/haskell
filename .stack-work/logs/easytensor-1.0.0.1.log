@@ -1,0 +1,37 @@
+Configuring easytensor-1.0.0.1...
+Preprocessing library for easytensor-1.0.0.1..
+Building library for easytensor-1.0.0.1..
+[ 1 of 31] Compiling Numeric.DataFrame.Family ( src\Numeric\DataFrame\Family.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Family.o )
+[ 2 of 31] Compiling Numeric.DataFrame.Internal.Array.PrimOps ( src\Numeric\DataFrame\Internal\Array\PrimOps.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Internal\Array\PrimOps.o )
+[ 3 of 31] Compiling Numeric.PrimBytes ( src\Numeric\PrimBytes.hs, .stack-work\dist\7d103d30\build\Numeric\PrimBytes.o )
+[ 4 of 31] Compiling Numeric.DataFrame.Internal.Array.Class ( src\Numeric\DataFrame\Internal\Array\Class.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Internal\Array\Class.o )
+[ 5 of 31] Compiling Numeric.DataFrame.SubSpace ( src\Numeric\DataFrame\SubSpace.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\SubSpace.o )
+[ 6 of 31] Compiling Numeric.DataFrame.Internal.Array.Family.ScalarBase ( src\Numeric\DataFrame\Internal\Array\Family\ScalarBase.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Internal\Array\Family\ScalarBase.o )
+[ 7 of 31] Compiling Numeric.DataFrame.Internal.Array.Family.FloatX4 ( src\Numeric\DataFrame\Internal\Array\Family\FloatX4.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Internal\Array\Family\FloatX4.o )
+[ 8 of 31] Compiling Numeric.DataFrame.Internal.Array.Family.FloatX3 ( src\Numeric\DataFrame\Internal\Array\Family\FloatX3.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Internal\Array\Family\FloatX3.o )
+[ 9 of 31] Compiling Numeric.DataFrame.Internal.Array.Family.FloatX2 ( src\Numeric\DataFrame\Internal\Array\Family\FloatX2.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Internal\Array\Family\FloatX2.o )
+[10 of 31] Compiling Numeric.DataFrame.Internal.Array.Family.DoubleX4 ( src\Numeric\DataFrame\Internal\Array\Family\DoubleX4.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Internal\Array\Family\DoubleX4.o )
+[11 of 31] Compiling Numeric.DataFrame.Internal.Array.Family.DoubleX3 ( src\Numeric\DataFrame\Internal\Array\Family\DoubleX3.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Internal\Array\Family\DoubleX3.o )
+[12 of 31] Compiling Numeric.DataFrame.Internal.Array.Family.DoubleX2 ( src\Numeric\DataFrame\Internal\Array\Family\DoubleX2.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Internal\Array\Family\DoubleX2.o )
+[13 of 31] Compiling Numeric.DataFrame.Internal.Array.Family.ArrayBase ( src\Numeric\DataFrame\Internal\Array\Family\ArrayBase.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Internal\Array\Family\ArrayBase.o )
+[14 of 31] Compiling Numeric.DataFrame.Internal.Array.Family ( src\Numeric\DataFrame\Internal\Array\Family.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Internal\Array\Family.o )
+[15 of 31] Compiling Numeric.DataFrame.Type ( src\Numeric\DataFrame\Type.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Type.o )
+[16 of 31] Compiling Numeric.DataFrame.Internal.Mutable ( src\Numeric\DataFrame\Internal\Mutable.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Internal\Mutable.o )
+[17 of 31] Compiling Numeric.DataFrame.ST ( src\Numeric\DataFrame\ST.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\ST.o )
+[18 of 31] Compiling Numeric.DataFrame.Internal.Array ( src\Numeric\DataFrame\Internal\Array.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Internal\Array.o )
+[19 of 31] Compiling Numeric.DataFrame.Contraction ( src\Numeric\DataFrame\Contraction.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Contraction.o )
+[20 of 31] Compiling Numeric.DataFrame.IO ( src\Numeric\DataFrame\IO.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\IO.o )
+[21 of 31] Compiling Numeric.Scalar   ( src\Numeric\Scalar.hs, .stack-work\dist\7d103d30\build\Numeric\Scalar.o )
+[22 of 31] Compiling Numeric.Semigroup ( src\Numeric\Semigroup.hs, .stack-work\dist\7d103d30\build\Numeric\Semigroup.o )
+[23 of 31] Compiling Numeric.Vector   ( src\Numeric\Vector.hs, .stack-work\dist\7d103d30\build\Numeric\Vector.o )
+[24 of 31] Compiling Numeric.Matrix.Class ( src\Numeric\Matrix\Class.hs, .stack-work\dist\7d103d30\build\Numeric\Matrix\Class.o )
+[25 of 31] Compiling Numeric.DataFrame.Shape ( src\Numeric\DataFrame\Shape.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame\Shape.o )
+[26 of 31] Compiling Numeric.Matrix   ( src\Numeric\Matrix.hs, .stack-work\dist\7d103d30\build\Numeric\Matrix.o )
+[27 of 31] Compiling Numeric.Quaternion.Class ( src\Numeric\Quaternion\Class.hs, .stack-work\dist\7d103d30\build\Numeric\Quaternion\Class.o )
+[28 of 31] Compiling Numeric.Quaternion.QFloat ( src\Numeric\Quaternion\QFloat.hs, .stack-work\dist\7d103d30\build\Numeric\Quaternion\QFloat.o )
+[29 of 31] Compiling Numeric.Quaternion.QDouble ( src\Numeric\Quaternion\QDouble.hs, .stack-work\dist\7d103d30\build\Numeric\Quaternion\QDouble.o )
+[30 of 31] Compiling Numeric.Quaternion ( src\Numeric\Quaternion.hs, .stack-work\dist\7d103d30\build\Numeric\Quaternion.o )
+[31 of 31] Compiling Numeric.DataFrame ( src\Numeric\DataFrame.hs, .stack-work\dist\7d103d30\build\Numeric\DataFrame.o )
+ignoring (possibly broken) abi-depends field for packages
+Installing library in C:\Users\info\Desktop\Projects\haskell\.stack-work\install\246e2677\lib\x86_64-windows-ghc-8.4.3\easytensor-1.0.0.1-3qjpnjeod0g8KgD8L6HvMT
+Registering library for easytensor-1.0.0.1..

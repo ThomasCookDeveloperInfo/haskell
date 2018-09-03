@@ -1,7 +1,7 @@
 Configuring bed-and-breakfast-0.1.2...
-Building bed-and-breakfast-0.1.2...
-Preprocessing library bed-and-breakfast-0.1.2...
-[1 of 1] Compiling Numeric.Matrix   ( src\Numeric\Matrix.hs, .stack-work\dist\ca59d0ab\build\Numeric\Matrix.o )
-Installing library in
-C:\Users\info\Desktop\Projects\haskell\.stack-work\install\6c953ab2\lib\x86_64-windows-ghc-8.0.2\bed-and-breakfast-0.1.2-DqujkKSaLk1E9HHVA1dnqY
-Registering bed-and-breakfast-0.1.2...
+Preprocessing library for bed-and-breakfast-0.1.2..
+Building library for bed-and-breakfast-0.1.2..
+[1 of 1] Compiling Numeric.Matrix   ( src\Numeric\Matrix.hs, .stack-work\dist\7d103d30\build\Numeric\Matrix.o )
+ignoring (possibly broken) abi-depends field for packages
+Installing library in C:\Users\info\Desktop\Projects\haskell\.stack-work\install\8c390635\lib\x86_64-windows-ghc-8.4.3\bed-and-breakfast-0.1.2-Lv3Kk74g7bI18Aff3el73F
+Registering library for bed-and-breakfast-0.1.2..

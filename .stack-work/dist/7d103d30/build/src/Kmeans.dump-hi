@@ -1,0 +1,79 @@
+
+==================== FINAL INTERFACE ====================
+2018-09-02 15:24:21.4229066 UTC
+
+interface realworldhaskell-0.1.0.0-8ARNQ4a1evNKDWjfxLC5zs:Kmeans 8043
+  interface hash: 357ae979d308dfa928b7ea81ab38dc30
+  ABI hash: 32adb7eec1d052e40191b282bb98b9d4
+  export-list hash: f070a4232259354eba94f28d35d372eb
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 571088946829602ed0a772276646e44d
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Kmeans.Cluster
+module dependencies:
+package dependencies: array-0.5.2.0 base-4.11.1.0*
+                      containers-0.5.11.0 deepseq-1.4.3.0 ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         containers-0.5.11.0:Data.Map.Internal
+                         containers-0.5.11.0:Data.Set.Internal
+import  -/  base-4.11.1.0:Data.Foldable 6cf3e918f22d03c0870804f05cd183d1
+import  -/  base-4.11.1.0:Data.List cb78ca5eace70fd310936fda86b3e611
+import  -/  base-4.11.1.0:Data.OldList 3987872d5de68d40c22cd1c30825ad08
+import  -/  base-4.11.1.0:Data.Ord 05e580d67bf544fdd5830bd5c1ee3164
+import  -/  base-4.11.1.0:GHC.Base b7dd14d8fe8d606dde5678ea6b0575e9
+import  -/  base-4.11.1.0:GHC.List 95910b50fba2204d1a3364fe070ebf2b
+import  -/  base-4.11.1.0:GHC.Num 5de8df0185e7e8d8ec29b3c61e2c8606
+import  -/  base-4.11.1.0:GHC.Real 032ed0a1053f878238d78e95e75f2edf
+import  -/  base-4.11.1.0:Prelude aca391812f777207b15d62bb5b9feb63
+import  -/  containers-0.5.11.0:Data.Map.Internal a2314ee57e16ff1fe3af08500b455e81
+import  -/  containers-0.5.11.0:Data.Map.Strict ea9cec0dc7e4353594a3f7d520e82c83
+import  -/  containers-0.5.11.0:Data.Map.Strict.Internal 9061dd54223c7e14ff6837ade55c2970
+import  -/  ghc-prim-0.5.2.0:GHC.Classes f7d67fd97d5a20e9252c9597d1aa387b
+7d23718cacc768970a108ce956f2d640
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Kmeans.$trModule3
+                   Kmeans.$trModule1) -}
+dd8007521ba904b4c3f002250e697bfa
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Kmeans.$trModule2) -}
+3228a32840d483bb3b9debbb3181a5d6
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Kmeans"#) -}
+1313dd1c1d7bb6758d4bd9674b6711ac
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Kmeans.$trModule4) -}
+85afc6cc1f45fda2ad43c92876b41b46
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("realworldhaskell-0.1.0.0-8ARNQ4a1evNKDWjfxLC5zs"#) -}
+8521134b5fc988a4ea91902082061ced
+  type Cluster = [Kmeans.Vec]
+5fb426d9c2b99c83d7dc3cbfd5230973
+  type Vec = [GHC.Types.Float]
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

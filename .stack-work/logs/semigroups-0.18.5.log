@@ -1,0 +1,7 @@
+Configuring semigroups-0.18.5...
+Preprocessing library for semigroups-0.18.5..
+Building library for semigroups-0.18.5..
+[1 of 1] Compiling Data.Semigroup.Generic ( src\Data\Semigroup\Generic.hs, .stack-work\dist\7d103d30\build\Data\Semigroup\Generic.o )
+ignoring (possibly broken) abi-depends field for packages
+Installing library in C:\sr\snapshots\3fb3e05b\lib\x86_64-windows-ghc-8.4.3\semigroups-0.18.5-E4FVMc5VZAG98u64romz5
+Registering library for semigroups-0.18.5..

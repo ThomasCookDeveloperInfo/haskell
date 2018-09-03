@@ -1,28 +1,34 @@
-module Training (randomInputs,
-                 randomWeights,
-                 forwardPassLayer) where
+module Training (forwardPass) where
 
-  import Numeric.Matrix
+  import Data.Matrix
   import System.Random
 
   leakyRelu :: Double -> Double
   leakyRelu a | a > 0.0 = a
               | otherwise = 0.01 * a
 
+  forwardPass :: [Double] -> Int -> Int -> Matrix Double
+  forwardPass i hiddenSize outputSize = outputs where
+    inputSize = length i
+    inputs = fromList 1 inputSize  i
+    outputs = forwardPassLayer hiddenOutputs outputWeights where
+      outputWeights = randomWeights outputSize 1
+      hiddenOutputs = forwardPassLayer inputOutputs hiddenWeights where
+        hiddenWeights = randomWeights hiddenSize outputSize
+        inputOutputs = forwardPassLayer inputs inputWeights where
+          inputWeights = randomWeights inputSize hiddenSize
+
+
   forwardPassLayer :: Matrix Double -> Matrix Double -> Matrix Double
   forwardPassLayer inputs weights = outputs where
-    outputs = Numeric.Matrix.map leakyRelu multipliedMatrix where
-      multipliedMatrix = inputs `times` weights
+    outputs = mapPos (\(row, col) a -> leakyRelu a) multipliedMatrix where
+      multipliedMatrix = multStd2 inputs weights
 
   randomWeights :: Int -> Int -> Matrix Double
   randomWeights inputSize outputSize = weights where
-    weights = matrix (inputSize, outputSize) (\(x, y) -> random!!(x*y)) where
+    weights = matrix inputSize outputSize (\(col, row) -> random!!(col * row)) where
       random = randomList (inputSize * outputSize)
 
-  randomInputs :: Int -> Matrix Double
-  randomInputs inputSize = inputs where
-    inputs = matrix (inputSize, 1) (\(x, y) -> random!!(x * y)) where
-      random = randomList inputSize
 
   randomList :: Int -> [Double]
-  randomList seed = randoms (mkStdGen seed) :: [Double]
+  randomList size = randoms (mkStdGen size) :: [Double]
