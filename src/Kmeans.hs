@@ -1,30 +1,90 @@
-module Kmeans (Cluster) where
+module Kmeans(
+  example
+) where
 
-  import qualified Data.Map.Strict as Map
-  import Data.List (minimumBy, genericLength, transpose)
-  import Data.Ord (comparing)
+import Data.List
+import Data.Function
+import System.Random
 
-  type Vec = [Float]
-  type Cluster = [Vec]
+data KmeansState = KmeansState {
+  clusters :: [Point],
+  centroids :: [Point]
+} deriving (Show, Eq)
 
-  kMeansIteration :: [Vec] -> [Vec] -> [Cluster]
-  kMeansIteration pts = clusterize . fixPoint iteration
-    where
-      iteration = map centroid . clusterize
+data Point = Point {
+  x :: Int,
+  y :: Int,
+  color :: Color
+} deriving (Show, Eq)
 
-      clusterize centroids = Map.elems $ foldr add m0 pts
-        where add x = Map.insertWith (++) (centroids `nearestTo` x) [x]
-              m0 = Map.unions $ map (`Map.singleton` []) centroids
+data Color = None
+  | Black
+  | Red
+  | Green
+  | Blue
+  deriving (Show, Eq, Enum)
 
-  nearestTo :: [Vec] -> Vec -> Vec
-  nearestTo pts x =  minimumBy (comparing (distance x)) pts
+assignClusters :: KmeansState -> KmeansState
+assignClusters kmeansState =
+  KmeansState newClusters (centroids kmeansState) where
 
-  distance :: Vec -> Vec -> Float
-  distance a b = sum $ map (^2) $ zipWith (-) a b
+    newClusters = map selectColor $ clusters kmeansState
 
-  centroid :: [Vec] -> Vec
-  centroid = map mean . transpose
-    where  mean pts = sum pts / genericLength pts
+    selectColor point =
+      Point x' y' color' where
+        x' = x point
+        y' = y point
+        color' = color closestCentroid
+        closestCentroid = minimumBy comparator $ centroids kmeansState
+        comparator = compare `on` euclidianDistance point
 
-  fixPoint :: Eq a => (a -> a) -> a -> a
-  fixPoint f x = if x == fx then x else fixPoint f fx where fx = f x
+    euclidianDistance pointA pointB =
+      sqrt (fromIntegral x' + fromIntegral y') where
+        x' = x pointA ^ 2
+        y' = y pointA ^ 2
+
+shiftCentroids :: KmeansState -> KmeansState
+shiftCentroids kmeansState =
+  KmeansState (clusters kmeansState) newCentroids where
+    newCentroids = map shiftCentroid (centroids kmeansState)
+
+    shiftCentroid centroid =
+      Point x' y' (color centroid) where
+        x' = mean xs
+        y' = mean ys
+        mean nums = sum nums `div` length nums
+        xs = map x sameColors
+        ys = map y sameColors
+        sameColors = filter sameColor (clusters kmeansState)
+        sameColor pointA = color pointA == color centroid
+
+kmeans :: (RandomGen g) => g -> Int -> [Point] -> KmeansState
+kmeans randGen numClusters unclustered = cluster $ KmeansState unclustered initialCentroids where
+  cluster kmeansState
+    | shiftCentroids (assignClusters kmeansState) == kmeansState = kmeansState
+    | otherwise = cluster $ shiftCentroids (assignClusters kmeansState)
+
+  initialCentroids =
+    map createCentroid [0..numClusters] where
+      createCentroid _ = Point x' y' color'
+      x' = fst $ randomR (minWidth, maxWidth) randGen
+      y' = fst $ randomR (minHeight, maxHeight) randGen
+      minWidth = minimum $ map x unclustered
+      maxWidth = maximum $ map x unclustered
+      minHeight = minimum $ map y unclustered
+      maxHeight = maximum $ map y unclustered
+      color' = toEnum $ fst $ randomR (0, numClusters) randGen
+
+numClusters = 3
+
+example :: IO ()
+example = do
+  let pointA = Point 10 10 None
+  let pointB = Point 200 200 None
+  let input = [pointA, pointB]
+
+  randGen <- getStdGen
+
+  let kmeansResult = kmeans randGen numClusters input
+
+  print kmeansResult
