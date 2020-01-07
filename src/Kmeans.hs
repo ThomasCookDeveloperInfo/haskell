@@ -19,7 +19,8 @@ data Point = Point {
   color :: Color
 } deriving (Show, Eq)
 
-data Color = Black
+data Color = None
+  | Black
   | Red
   | Green
   | Blue
@@ -59,8 +60,8 @@ assignClusters kmeansState =
 
     euclidianDistance pointA pointB =
       sqrt (fromIntegral x' + fromIntegral y') where
-        x' = x pointA ^ 2
-        y' = y pointA ^ 2
+        x' = (x pointA - x pointB) ^ 2
+        y' = (y pointA - y pointB) ^ 2
 
 shiftCentroids :: KmeansState -> KmeansState
 shiftCentroids kmeansState =
@@ -69,11 +70,11 @@ shiftCentroids kmeansState =
 
     shiftCentroid centroid =
       Point x' y' (color centroid) where
-        x' = mean xs
-        y' = mean ys
+        x' = if null xs then x centroid else mean xs
+        y' = if null ys then y centroid else mean ys
+        mean nums = sum nums `div` length nums
         xs = map x sameColors
         ys = map y sameColors
-        mean nums = sum nums `div` length nums
         sameColors = filter sameColor (clusters kmeansState)
         sameColor pointA = color pointA == color centroid
 
@@ -83,22 +84,27 @@ kmeans unclustered initialCentroids = cluster $ KmeansState unclustered initialC
     | shiftCentroids (assignClusters kmeansState) == kmeansState = kmeansState
     | otherwise = cluster $ shiftCentroids (assignClusters kmeansState)
 
-filterIndexed :: (a -> Int -> Bool) -> [a] -> [a]
-filterIndexed pred xs = [x | (x, i) <- zip xs [0..], pred x i]
-
-numClusters = 4
+numClusters = 2
 
 example :: IO ()
 example = do
 
-  let pointA = Point 10 10 Black
-  let pointB = Point 200 200 Black
-  let pointC = Point 37 90 Black
-  let pointD = Point 68 130 Black
-  let pointE = Point 85 20 Black
-  let pointF = Point 12 300 Black
-  let pointF = Point 2000 1200 Black
-  let unclusteredData = [pointA, pointB, pointC, pointD, pointE, pointF]
+  let pointA = Point 10 10 None
+  let pointB = Point 11 11 None
+  let pointC = Point 10 11 None
+  let pointD = Point 11 12 None
+  let pointE = Point 12 12 None
+  let pointF = Point 14 13 None
+  let pointG = Point 5 8 None
+
+  let pointA' = Point 100 100 None
+  let pointB' = Point 110 110 None
+  let pointC' = Point 100 110 None
+  let pointD' = Point 110 120 None
+  let pointE' = Point 120 120 None
+  let pointF' = Point 140 130 None
+  let pointG' = Point 50 80 None
+  let unclusteredData = [pointA, pointB, pointC, pointD, pointE, pointF, pointG, pointA', pointB', pointC', pointD', pointE', pointF', pointG']
 
   let minWidth = minimum $ map x unclusteredData
   let maxWidth = maximum $ map x unclusteredData
@@ -107,10 +113,14 @@ example = do
 
   randGen <- getStdGen
 
-  let initialCentroids = take numClusters $ randomRs (Point minWidth minHeight minBound, Point maxWidth maxHeight maxBound) randGen
+  let randomPoints = map (unclusteredData!!) (take numClusters $ randomRs (0, length unclusteredData) randGen)
 
-  let initiallyClusteredData = map (\(Point x y _) -> Point x y (color (head initialCentroids))) unclusteredData
+  let initialCentroids = zipWith (curry (\(index, Point x y _) -> Point x y $ toEnum index)) [1..] randomPoints
 
-  let kmeansResult = kmeans unclusteredData initiallyClusteredData
+  putStrLn $ "Initial centroids: " ++ show initialCentroids
+
+  putStrLn $ "Unclustered data: " ++ show unclusteredData
+
+  let kmeansResult = assignClusters $ KmeansState unclusteredData initialCentroids
 
   putStrLn $ "Clustered Data: " ++ show kmeansResult

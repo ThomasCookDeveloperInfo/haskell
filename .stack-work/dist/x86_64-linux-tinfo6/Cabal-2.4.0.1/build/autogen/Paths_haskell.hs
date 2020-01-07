@@ -29,12 +29,12 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/home/topcat/Desktop/Repositories/haskell/.stack-work/install/x86_64-linux-tinfo6/30ce7849869e9f420819be512faa1df1d078cf884bae497894c8ba205e3ce037/8.6.5/bin"
-libdir     = "/home/topcat/Desktop/Repositories/haskell/.stack-work/install/x86_64-linux-tinfo6/30ce7849869e9f420819be512faa1df1d078cf884bae497894c8ba205e3ce037/8.6.5/lib/x86_64-linux-ghc-8.6.5/haskell-0.1.0.0-4f75kyihSP82AIcekbO7jL"
-dynlibdir  = "/home/topcat/Desktop/Repositories/haskell/.stack-work/install/x86_64-linux-tinfo6/30ce7849869e9f420819be512faa1df1d078cf884bae497894c8ba205e3ce037/8.6.5/lib/x86_64-linux-ghc-8.6.5"
-datadir    = "/home/topcat/Desktop/Repositories/haskell/.stack-work/install/x86_64-linux-tinfo6/30ce7849869e9f420819be512faa1df1d078cf884bae497894c8ba205e3ce037/8.6.5/share/x86_64-linux-ghc-8.6.5/haskell-0.1.0.0"
-libexecdir = "/home/topcat/Desktop/Repositories/haskell/.stack-work/install/x86_64-linux-tinfo6/30ce7849869e9f420819be512faa1df1d078cf884bae497894c8ba205e3ce037/8.6.5/libexec/x86_64-linux-ghc-8.6.5/haskell-0.1.0.0"
-sysconfdir = "/home/topcat/Desktop/Repositories/haskell/.stack-work/install/x86_64-linux-tinfo6/30ce7849869e9f420819be512faa1df1d078cf884bae497894c8ba205e3ce037/8.6.5/etc"
+bindir     = "/home/thomas/Desktop/Repositories/haskell/.stack-work/install/x86_64-linux-tinfo6/74d414451094670897f381915653ad6560d85de3644cfc35ac445ccc064c575e/8.6.5/bin"
+libdir     = "/home/thomas/Desktop/Repositories/haskell/.stack-work/install/x86_64-linux-tinfo6/74d414451094670897f381915653ad6560d85de3644cfc35ac445ccc064c575e/8.6.5/lib/x86_64-linux-ghc-8.6.5/haskell-0.1.0.0-4f75kyihSP82AIcekbO7jL"
+dynlibdir  = "/home/thomas/Desktop/Repositories/haskell/.stack-work/install/x86_64-linux-tinfo6/74d414451094670897f381915653ad6560d85de3644cfc35ac445ccc064c575e/8.6.5/lib/x86_64-linux-ghc-8.6.5"
+datadir    = "/home/thomas/Desktop/Repositories/haskell/.stack-work/install/x86_64-linux-tinfo6/74d414451094670897f381915653ad6560d85de3644cfc35ac445ccc064c575e/8.6.5/share/x86_64-linux-ghc-8.6.5/haskell-0.1.0.0"
+libexecdir = "/home/thomas/Desktop/Repositories/haskell/.stack-work/install/x86_64-linux-tinfo6/74d414451094670897f381915653ad6560d85de3644cfc35ac445ccc064c575e/8.6.5/libexec/x86_64-linux-ghc-8.6.5/haskell-0.1.0.0"
+sysconfdir = "/home/thomas/Desktop/Repositories/haskell/.stack-work/install/x86_64-linux-tinfo6/74d414451094670897f381915653ad6560d85de3644cfc35ac445ccc064c575e/8.6.5/etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "haskell_bindir") (\_ -> return bindir)
