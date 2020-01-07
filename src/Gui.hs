@@ -43,8 +43,23 @@ setup window = do
 
   pointsBehaviour <- accumB [] pointsStream
 
-  on UI.click clearButton $ const $
+  on UI.click clearButton $ const $ do
     UI.clearCanvas canvas
+
+  on UI.click canvas $ const $ do
+    UI.clearCanvas canvas
+
+    partialPoints <- currentValue pointsBehaviour
+
+    let points = fmap ($ None) partialPoints
+
+    forM_ points $ \(Point x y color) -> do
+      return canvas
+        # set UI.strokeStyle (if color == Black then "black" else if color == Red then "red" else if color == Green then "green" else if color == Blue then "blue" else "")
+      canvas # UI.beginPath
+      canvas # UI.arc (fromIntegral x, fromIntegral y) pointRadius (-pi) pi
+      canvas # UI.closePath
+      canvas # UI.stroke
 
   on UI.click clusterButton $ const $ do
     UI.clearCanvas canvas
