@@ -1,4 +1,7 @@
 module Kmeans(
+  KmeansState(..),
+  Point(..),
+  Color(..),
   example
 ) where
 
@@ -86,16 +89,16 @@ kmeans unclustered initialCentroids = cluster $ KmeansState unclustered initialC
 
 numClusters = 2
 
-example :: IO ()
+example :: IO KmeansState
 example = do
 
   let pointA = Point 10 10 None
-  let pointB = Point 11 11 None
-  let pointC = Point 10 11 None
-  let pointD = Point 11 12 None
-  let pointE = Point 12 12 None
-  let pointF = Point 14 13 None
-  let pointG = Point 5 8 None
+  let pointB = Point 30 15 None
+  let pointC = Point 45 30 None
+  let pointD = Point 5 20 None
+  let pointE = Point 45 10 None
+  let pointF = Point 35 15 None
+  let pointG = Point 5 60 None
 
   let pointA' = Point 100 100 None
   let pointB' = Point 110 110 None
@@ -121,6 +124,4 @@ example = do
 
   putStrLn $ "Unclustered data: " ++ show unclusteredData
 
-  let kmeansResult = assignClusters $ KmeansState unclusteredData initialCentroids
-
-  putStrLn $ "Clustered Data: " ++ show kmeansResult
+  return (assignClusters $ KmeansState unclusteredData initialCentroids)

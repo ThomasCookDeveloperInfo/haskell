@@ -1,6 +1,6 @@
 module Main where
 
-import Kmeans
+import Gui
 
 main :: IO ()
-main = example
+main = runGui

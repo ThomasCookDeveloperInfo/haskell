@@ -4,7 +4,7 @@ module Gui(
 
 import qualified Graphics.UI.Threepenny as UI
 import Graphics.UI.Threepenny.Core
-import Algorithms
+import Kmeans
 import Control.Monad
 
 canvasSize = 400
@@ -22,33 +22,25 @@ setup window = do
     # set UI.width canvasSize
     # set style [("border", "solid black 1px"), ("background", "#eee")]
 
-  loadGraphButton <- UI.button #+ [string "Load graph"]
-
-  clusterButton <- UI.button #+ [string "Cluster graph"]
+  clusterButton <- UI.button #+ [string "Do kmeans"]
 
   getBody window #+
     [
     column [element canvas],
     element canvas,
-    element loadGraphButton,
     element clusterButton
     ]
 
-  on UI.click loadGraphButton $ const $ do
+  on UI.click clusterButton $ const $ do
     UI.clearCanvas canvas
 
-    graph <- liftIO (readGraphFromFile "graph.txt")
+    kmeansState <- liftIO (example)
 
-    forM_ graph $ \(Point x y _) -> do
-      canvas # set' UI.fillStyle (UI.htmlColor "teal")
+    forM_ (clusters kmeansState) $ \(Point x y color) -> do
+      canvas # set' UI.fillStyle (UI.htmlColor (if color == Black then "black" else if color == Red then "red" else if color == Green then "green" else "blue"))
       canvas # UI.beginPath
       canvas # UI.arc (fromIntegral x, fromIntegral y) nodeRadius (-pi) pi
       canvas # UI.closePath
       canvas # UI.fill
-
-  on UI.click clusterButton $ const $ do
-    graph <- liftIO (readGraphFromFile "graph.txt")
-
-    return ()
 
   return ()

@@ -6,27 +6,19 @@
   hash: 5dc24d6ca0963ca5bcb40a7f0c7ab0898c9c63f49d011db351822fa12940c2d3
   size: 47
   modtime: 1578394872
-/home/thomas/Desktop/Repositories/haskell/src/Algorithms.hs:
-  hash: fc2c5ad27c53922f2a968443ed1c1a4817b3b3011ba79ea75d49da80922ce4b5
-  size: 898
-  modtime: 1578394872
 /home/thomas/Desktop/Repositories/haskell/src/Kmeans.hs:
-  hash: aaf024de9f3d621e20b066a16951982905427c0935b1db4ec2cac39afb9dc6c1
-  size: 3850
-  modtime: 1578413578
+  hash: 167a59315409f5bf2702a8d9501143cd6d5727097315cc23f88e7800636f316a
+  size: 3840
+  modtime: 1578414243
 /home/thomas/Desktop/Repositories/haskell/haskell.cabal:
-  hash: 60547f6f7c9c72d8bfeef2592af1a6b6e0107621ca5b5d4259a0072f1a30a225
-  size: 1786
-  modtime: 1578394872
+  hash: 86e4fc473a9b361dd645bafe9e7b04a43ce623aa7864ab354172c3edd20cd215
+  size: 1756
+  modtime: 1578414030
 /home/thomas/Desktop/Repositories/haskell/package.yaml:
   hash: 08c271b4b18f8de0d17df5afe6a57ea181a7dab98442d8ee5c681e1eb55f444f
   size: 777
   modtime: 1578394872
 /home/thomas/Desktop/Repositories/haskell/src/Gui.hs:
-  hash: 9eb4f7deda7631bfb216562861d88925d7252af333b8cb61563eebf4f010fa32
-  size: 1227
-  modtime: 1578394872
-/home/thomas/Desktop/Repositories/haskell/src/Random.hs:
-  hash: c4a49903bb6dde103df125da0d181f531a2a141a6a7ded34252aebdce633d134
-  size: 294
-  modtime: 1578394872
+  hash: 293e19a2e285fd0c07e6d573913268544f3ce1f0e7ae09711267ab00af860ea4
+  size: 1133
+  modtime: 1578414164

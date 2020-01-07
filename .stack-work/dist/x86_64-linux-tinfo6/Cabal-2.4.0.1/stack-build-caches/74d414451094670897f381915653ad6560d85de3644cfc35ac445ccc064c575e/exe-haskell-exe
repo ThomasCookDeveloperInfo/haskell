@@ -7,14 +7,14 @@
   size: 47
   modtime: 1578394872
 /home/thomas/Desktop/Repositories/haskell/haskell.cabal:
-  hash: 60547f6f7c9c72d8bfeef2592af1a6b6e0107621ca5b5d4259a0072f1a30a225
-  size: 1786
-  modtime: 1578394872
+  hash: 86e4fc473a9b361dd645bafe9e7b04a43ce623aa7864ab354172c3edd20cd215
+  size: 1756
+  modtime: 1578414030
 /home/thomas/Desktop/Repositories/haskell/package.yaml:
   hash: 08c271b4b18f8de0d17df5afe6a57ea181a7dab98442d8ee5c681e1eb55f444f
   size: 777
   modtime: 1578394872
 /home/thomas/Desktop/Repositories/haskell/app/Main.hs:
-  hash: 89b494a3454b6d9139f57ae506009fec9afd6a5f6570026ae31210ad560b66f1
-  size: 63
-  modtime: 1578394872
+  hash: eaed7b96d1de0323e5d59fc68d88b085ee5a1add3ab21f70ab289abd449f25fb
+  size: 59
+  modtime: 1578414009
