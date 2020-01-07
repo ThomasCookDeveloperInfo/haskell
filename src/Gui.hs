@@ -22,17 +22,27 @@ setup window = do
     # set UI.width canvasSize
     # set style [("border", "solid black 1px"), ("background", "#eee")]
 
-  clusterButton <- UI.button #+ [string "Do kmeans"]
+  clusterButton <- UI.button #+ [string "Cluster"]
+
+  clearButton <- UI.button #+ [string "Clear"]
 
   getBody window #+
     [
     column [element canvas],
     element canvas,
-    element clusterButton
+    element clusterButton,
+    element clearButton
     ]
 
-  on UI.click clusterButton $ const $ do
+  let canvasClick = UI.mousedown canvas
+      newPoint = (\(x, y) -> Point x y None) <$> (canvasClick)
+
+
+
+  on UI.click clearButton $ const $
     UI.clearCanvas canvas
+
+  on UI.click clusterButton $ const $ do
 
     let pointA = Point 10 10 None
     let pointB = Point 30 15 None

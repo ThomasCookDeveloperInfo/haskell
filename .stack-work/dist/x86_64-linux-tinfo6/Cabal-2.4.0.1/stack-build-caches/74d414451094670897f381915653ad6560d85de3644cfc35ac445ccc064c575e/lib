@@ -9,7 +9,7 @@
 /home/thomas/Desktop/Repositories/haskell/src/Kmeans.hs:
   hash: ee87c118d46f6d3177eed0e33ff4ce79cfd3de6f984b065daf8ed55293c33b71
   size: 3137
-  modtime: 1578414893
+  modtime: 1578414978
 /home/thomas/Desktop/Repositories/haskell/haskell.cabal:
   hash: 86e4fc473a9b361dd645bafe9e7b04a43ce623aa7864ab354172c3edd20cd215
   size: 1756
@@ -19,6 +19,6 @@
   size: 777
   modtime: 1578394872
 /home/thomas/Desktop/Repositories/haskell/src/Gui.hs:
-  hash: 116b7e8d70797b620ac05bd513839196073fbecde04ebe5b1eca13620fac7cdf
-  size: 1791
-  modtime: 1578414905
+  hash: 507c7373105d4817d7aafafa8b6e18e31854cc84154d23d7da57d012bfe484dd
+  size: 2044
+  modtime: 1578417849
