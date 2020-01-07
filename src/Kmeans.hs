@@ -29,6 +29,9 @@ data Color = None
   | Blue
   deriving (Show, Eq, Enum, Bounded)
 
+z :: (Point -> a) -> [Point] -> [a]
+z = map
+
 instance Random Color where
   random g = case randomR (0, 3) g of
     (r, g') -> (toEnum r, g')
@@ -50,9 +53,7 @@ instance Random Point where
 assignClusters :: KmeansState -> KmeansState
 assignClusters kmeansState =
   KmeansState newClusters (centroids kmeansState) where
-
     newClusters = map selectColor $ clusters kmeansState
-
     selectColor point =
       Point x' y' color' where
         x' = x point
@@ -60,45 +61,40 @@ assignClusters kmeansState =
         color' = color closestCentroid
         closestCentroid = minimumBy comparator $ centroids kmeansState
         comparator = compare `on` euclidianDistance point
-
-    euclidianDistance pointA pointB =
-      sqrt (fromIntegral x' + fromIntegral y') where
-        x' = (x pointA - x pointB) ^ 2
-        y' = (y pointA - y pointB) ^ 2
+        euclidianDistance pointA pointB =
+          sqrt (fromIntegral x' + fromIntegral y') where
+            x' = abs (x pointA - x pointB) ^ 2
+            y' = abs (y pointA - y pointB) ^ 2
 
 shiftCentroids :: KmeansState -> KmeansState
 shiftCentroids kmeansState =
   KmeansState (clusters kmeansState) newCentroids where
     newCentroids = map shiftCentroid (centroids kmeansState)
-
     shiftCentroid centroid =
       Point x' y' (color centroid) where
-        x' = if null xs then x centroid else mean xs
-        y' = if null ys then y centroid else mean ys
-        mean nums = sum nums `div` length nums
+        x' = mean xs
+        y' = mean ys
+        mean nums = sum nums `div` numCount where
+          numCount = if null nums then 1 else length nums
         xs = map x sameColors
         ys = map y sameColors
         sameColors = filter sameColor (clusters kmeansState)
-        sameColor pointA = color pointA == color centroid
+        sameColor point = color point == color centroid
 
 kmeans' :: [Point]-> [Point] -> KmeansState
 kmeans' unclustered initialCentroids = cluster $ KmeansState unclustered initialCentroids where
   cluster kmeansState
-    | shiftCentroids (assignClusters kmeansState) == kmeansState = kmeansState
-    | otherwise = cluster $ shiftCentroids (assignClusters kmeansState)
+    | newKmeansState == kmeansState = kmeansState
+    | otherwise = cluster newKmeansState
+    where newKmeansState = shiftCentroids (assignClusters kmeansState)
 
 kmeans :: Int -> [Point] -> IO KmeansState
 kmeans numClusters unclusteredData = do
-
   let minWidth = minimum $ map x unclusteredData
   let maxWidth = maximum $ map x unclusteredData
   let minHeight = minimum $ map y unclusteredData
   let maxHeight = maximum $ map y unclusteredData
-
   randGen <- getStdGen
-
   let randomPoints = map (unclusteredData!!) (take numClusters $ randomRs (0, length unclusteredData) randGen)
-
   let initialCentroids = zipWith (curry (\(index, Point x y _) -> Point x y $ toEnum index)) [1..] randomPoints
-
-  return (assignClusters $ KmeansState unclusteredData initialCentroids)
+  return (kmeans' unclusteredData initialCentroids)

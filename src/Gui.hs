@@ -6,9 +6,12 @@ import qualified Graphics.UI.Threepenny as UI
 import Graphics.UI.Threepenny.Core
 import Kmeans
 import Control.Monad
+import Data.Typeable
+import Control.Applicative
 
 canvasSize = 400
-nodeRadius = 5.0
+pointRadius = 5.0
+centroidRadius = 2.5
 
 runGui :: IO ()
 runGui = startGUI defaultConfig setup
@@ -34,39 +37,34 @@ setup window = do
     element clearButton
     ]
 
-  let canvasClick = UI.mousedown canvas
-      newPoint = (\(x, y) -> Point x y None) <$> (canvasClick)
+  let pointStream = uncurry Point <$> UI.mousedown canvas
 
+  let pointsStream = fmap (:) pointStream
 
+  pointsBehaviour <- accumB [] pointsStream
 
   on UI.click clearButton $ const $
     UI.clearCanvas canvas
 
   on UI.click clusterButton $ const $ do
+    UI.clearCanvas canvas
 
-    let pointA = Point 10 10 None
-    let pointB = Point 30 15 None
-    let pointC = Point 45 30 None
-    let pointD = Point 5 20 None
-    let pointE = Point 45 10 None
-    let pointF = Point 35 15 None
-    let pointG = Point 5 60 None
+    points <- currentValue pointsBehaviour
 
-    let pointA' = Point 100 100 None
-    let pointB' = Point 110 110 None
-    let pointC' = Point 100 110 None
-    let pointD' = Point 110 120 None
-    let pointE' = Point 120 120 None
-    let pointF' = Point 140 130 None
-    let pointG' = Point 50 80 None
-    let unclusteredData = [pointA, pointB, pointC, pointD, pointE, pointF, pointG, pointA', pointB', pointC', pointD', pointE', pointF', pointG']
-
-    kmeansState <- liftIO (kmeans 2 unclusteredData)
+    kmeansState <- liftIO (kmeans 4 (fmap ($ None) points))
 
     forM_ (clusters kmeansState) $ \(Point x y color) -> do
+      return canvas
+        # set UI.strokeStyle (if color == Black then "black" else if color == Red then "red" else if color == Green then "green" else if color == Blue then "blue" else "")
+      canvas # UI.beginPath
+      canvas # UI.arc (fromIntegral x, fromIntegral y) pointRadius (-pi) pi
+      canvas # UI.closePath
+      canvas # UI.stroke
+
+    forM_ (centroids kmeansState) $ \(Point x y color) -> do
       canvas # set' UI.fillStyle (UI.htmlColor (if color == Black then "black" else if color == Red then "red" else if color == Green then "green" else "blue"))
       canvas # UI.beginPath
-      canvas # UI.arc (fromIntegral x, fromIntegral y) nodeRadius (-pi) pi
+      canvas # UI.arc (fromIntegral x, fromIntegral y) centroidRadius (-pi) pi
       canvas # UI.closePath
       canvas # UI.fill
 
